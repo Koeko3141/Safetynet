@@ -34,3 +34,9 @@ footer a:hover {
 .highlight a:hover {
     background-color: #00acc1 !important;
 }
+
+.dark-container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: lightgrey;
+}
