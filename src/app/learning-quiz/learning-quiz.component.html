@@ -1,1 +1,18 @@
-<p>learning-quiz works!</p>
+<div class="container">
+  <h3 class="center-align">Learning Quiz</h3>
+
+  <div class="row">
+    <div class="col s12">
+      <app-question
+        *ngFor="let q of questions"
+        class="card"
+        [question]="q.question"
+        [answers]="q.answers"
+        [correctAnswer]="q.correctAnswer"
+        [feedback]="q.feedback"
+        [isSelfCheck]="false"
+        (answerSelected)="onAnswerSelected(q.question, $event)">
+      </app-question>
+    </div>
+  </div>
+</div>

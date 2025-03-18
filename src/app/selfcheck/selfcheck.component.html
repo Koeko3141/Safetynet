@@ -1,1 +1,22 @@
-<p>selfcheck works!</p>
+<div class="container">
+  <h3 class="center-align">Self-Check Quiz</h3>
+
+  <div class="row">
+    <div class="col s12">
+      <app-question
+        *ngFor="let q of questions"
+        class="card"
+        [question]="q.question"
+        [answers]="q.answers"
+        [correctAnswer]="q.correctAnswer"
+        [feedback]="q.feedback"
+        [isSelfCheck]="true"
+        (answerSelected)="onAnswerSelected(q.question, $event)">
+      </app-question>
+    </div>
+  </div>
+  <button class="btn" (click)="evaluateQuiz()">Submit</button>
+  <div *ngIf="showFeedback">
+    <p>You got {{ correctCount }} out of {{ questions.length }} questions correct.</p>
+  </div>
+</div>

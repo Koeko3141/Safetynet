@@ -1,0 +1,19 @@
+<ul class="collection">
+  <li *ngFor="let answer of answers" class="collection-item">
+    <label>
+      <input
+        type="radio"
+        [name]="question"
+        (click)="selectAnswer(answer.text, $event)"
+      />
+      <span [ngClass]="getAnswerClass(answer.text)">{{ answer.text }}</span>
+    </label>
+  </li>
+</ul>
+<button *ngIf="!isSelfCheck" class="btn" (click)="showAnswerFeedback()">Okay</button>
+<div *ngIf="showFeedback">
+  <p [ngClass]="{'correct-answer': isCorrect, 'wrong-answer': !isCorrect}">
+    {{ isCorrect ? 'Correct!' : 'Incorrect!' }}
+  </p>
+  <p>{{ feedback }}</p>
+</div>
