@@ -1,36 +1,14 @@
-<nav class="card-panel  nav-extended" style="padding: 0; margin-top: 0; margin-bottom: 0;">
-
+<nav>
     <!-- TITEL - LOGO -->
     <div class="nav-wrapper">
       <a routerLink="/start-page">
         <img src="https://safetynet.im/wp-content/uploads/2022/12/Main-Logo-2.png" class="logo" title="SafetyNet Logo" alt="Logo: SafetyNet">
       </a>
-      <div class="clear"></div>
-    </div>
-
-    <!-- MENU SECTIONS -->
-    <div class="nav-content" style="border-top: 1px solid black; border-bottom: 1px solid black; padding-left: 1.5%; padding-right: 1.5%;" role="navigation">
-      <ul class="tabs tabs-transparent navSections hide-on-med-and-down" style="height: 38px;">
-        <li class="tab section"><a class="btn cyan darken-3 secHeader"
-            routerLink="/extra-info" title="Extra info">Extra Information</a></li>
-        <li class="tab section"><a class="btn cyan darken-3 secHeader"
-             routerLink="/interactive-story" title="Interactive story">Interactive Story</a></li>
-        <li class="tab section"><a class="btn cyan darken-3 secHeader"
-            routerLink="/self-check" title="Self test">Self Test</a>
-        </li>
-        <li class="tab section"><a class="btn cyan darken-3 secHeader"
-          routerLink="/help-site" title="Help site">Help Site</a>
-        </li>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="/extra-info" title="Extra info">Extra Information</a></li>
+        <li><a routerLink="/interactive-story" title="Interactive story">Interactive Story</a></li>
+        <li><a routerLink="/self-check" title="Self test">Self Test</a></li>
+        <li><a routerLink="/help-site" title="Help site">Help Site</a></li>
       </ul>
-
-      <a href="#" style="margin-top: 24px; margin-left: 3%;" data-target="mobile-demo" class="sidenav-trigger">
-        <i style="height: 30px; width: 30px; line-height: 24px; background: #00838f; border-radius: 4px; text-align: center; padding-top: 3px;" class="material-icons">menu</i>
-      </a>
     </div>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a routerLink="/extra-info">Anime</a></li>
-      <li><a routerLink="/interactive-story">Mangas</a></li>
-      <li><a routerLink="/self-check">ESO Dungeons</a></li>
-      <li><a routerLink="/help-site">My Lists</a></li>
-  </ul>
   </nav>

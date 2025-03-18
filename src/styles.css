@@ -35,36 +35,3 @@ footer a:hover {
 .highlight a:hover {
     background-color: #00acc1 !important;
 }
-
-.tab a:hover {
-    background-color: #00acc1 !important;
-}
-
-.navSections {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden !important;
-}
-
-.section {
-    width: 15%;
-    height: 38px !important;
-}
-
-.section:first-of-type {
-    margin-right: auto !important;
-}
-
-.section:nth-last-child(2) {
-    margin-left: auto !important;
-}
-
-.section:nth-of-type(2) {
-    margin-right: auto !important;
-}
-
-.secHeader {
-    margin: 0px !important;
-    font-size: 1.2em !important;
-    color: white !important;
-}
