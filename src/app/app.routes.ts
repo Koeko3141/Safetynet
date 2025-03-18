@@ -5,7 +5,8 @@ import {LearningQuizComponent} from "./learning-quiz/learning-quiz.component";
 import {InteractiveStoryComponent} from "./interactive-story/interactive-story.component";
 
 export const routes: Routes = [
-  {path: '', redirectTo: StartPageComponent, pathMatch: 'full'},
+  {path: '', redirectTo: 'start-page', pathMatch: 'full'},
+  {path: 'start-page', pathMatch: 'full', component: StartPageComponent},
   {path: 'self-check', pathMatch: 'full', component: SelfcheckComponent},
   {path: 'learning-quiz', pathMatch: 'full', component: LearningQuizComponent},
   {path: 'interactive-story', pathMatch: 'full', component: InteractiveStoryComponent},
