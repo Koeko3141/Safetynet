@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Selector */
+main {
+    flex: 1 0 auto;
+    padding: 1% 2%;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 200%;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Structure, IDs */
+
+
+/* Classes */
+.clear {
+    clear: both;
+}
+
+.center {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.highlight a:hover {
+    background-color: #00acc1 !important;
+}
+
+.tab a:hover {
+    background-color: #00acc1 !important;
+}
+
+.navSections {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden !important;
+}
+
+.section {
+    width: 15%;
+    height: 38px !important;
+}
+
+.section:first-of-type {
+    margin-right: auto !important;
+}
+
+.section:nth-last-child(2) {
+    margin-left: auto !important;
+}
+
+.section:nth-of-type(2) {
+    margin-right: auto !important;
+}
+
+.secHeader {
+    margin: 0px !important;
+    font-size: 1.2em !important;
+    color: white !important;
+}

@@ -1,0 +1,11 @@
+.logo {
+    float: left;
+    margin-left: 1.5%;
+    height: auto;
+    max-height: 5em;
+    width: auto;
+    max-width: 90vw;
+    margin-top: 12px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
