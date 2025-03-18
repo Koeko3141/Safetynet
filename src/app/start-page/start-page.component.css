@@ -1,0 +1,20 @@
+.custom-box {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 1px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.right-link {
+    float: right;
+    margin-top: 10px;
+}
+
+.dark-container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: lightgrey;
+}
