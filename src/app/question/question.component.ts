@@ -19,6 +19,8 @@ export class QuestionComponent {
   @Input() feedback: string = "";
   @Input() isSelfCheck: boolean = false;
   @Output() answerSelected = new EventEmitter<string>();
+  @Output() showFeedback: boolean = false; // default -> to be adapted
+  @Output() isCorrect: boolean = false; // default -> to be adapted
 
   selectedAnswer: string | null = null;
 
@@ -37,4 +39,10 @@ export class QuestionComponent {
     }
     return "";
   }
+
+  showAnswerFeedback() {
+
+  }
+
+
 }
