@@ -9,13 +9,15 @@
                         <p style="font-weight: bold; margin-bottom: 5px;">Telefonnummern:</p>
                         <p style="margin: 0;">Für unmittelbar drohender Gefahr: <b>133</b></p>
                         <p style="margin-top: 0;">Servicenummer der Polizei: <b>+43 59 133</b></p>
-                        <img href="https://www.bmi.gv.at/" src="assets/BMI_Logo_2018.jpg" style="height: 25%;" title="BMI Logo" alt="Logo: Bundesministerium Inneres">
+                        <img href="https://www.bmi.gv.at/" src="assets/BMI_Logo_2018.jpg" style="height: 25%;"
+                            title="BMI Logo" alt="Logo: Bundesministerium Inneres">
                     </div>
                     <div class="grid-item">
                         <h2>Beratungsstelle Extremismus</h2>
                         <p style="font-weight: bold; margin-bottom: 5px;">Telefonnummern:</p>
                         <p style="margin-top: 0; margin-bottom: 35px;">Helpline: <b>0800 2020 44</b></p>
-                        <img href="https://www.beratungsstelleextremismus.at/" src="assets/Boja_Logo.jpg" title="Boja Logo" alt="Logo: Beratungsstelle Extremismus">
+                        <img href="https://www.beratungsstelleextremismus.at/" src="assets/Boja_Logo.jpg"
+                            title="Boja Logo" alt="Logo: Beratungsstelle Extremismus">
                     </div>
                 </div>
             </div>
@@ -23,7 +25,6 @@
     </div>
     <div class="dark-container">
         <div class="container">
-
             <div class="card-panel white z-depth-0 custom-box">
                 <h1 style="margin-top: 10px;">Anonyme Meldung:</h1>
                 <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
@@ -41,12 +42,14 @@
                         <label><span class="required-symbol">* </span>Möchten Sie Ihren Namen angeben?</label>
                         <div style="margin-top: 10px;">
                             <label for="nameYes">
-                                <input type="radio" class="with-gap red darken-4" id="nameYes" name="nameOption" [(ngModel)]="nameOption" value="yes">
+                                <input type="radio" class="with-gap red darken-4" id="nameYes" name="nameOption"
+                                    [(ngModel)]="nameOption" value="yes">
                                 <span style="font-weight: normal;">Ja</span>
                             </label>
                             <br>
                             <label for="nameNo">
-                                <input type="radio" class="with-gap red darken-4" id="nameNo" name="nameOption" [(ngModel)]="nameOption" value="no" checked>
+                                <input type="radio" class="with-gap red darken-4" id="nameNo" name="nameOption"
+                                    [(ngModel)]="nameOption" value="no" checked>
                                 <span style="font-weight: normal;">Nein</span>
                             </label>
                         </div>
@@ -55,7 +58,7 @@
                     <div *ngIf="nameOption === 'yes'" class="form-div">
                         <p style="margin: 0">Beachten Sie, dass Sie Ihre Anonymität freiwillig aufgeben.</p>
                     </div>
-                    
+
                     <!-- show name field only if nameOption is yes -->
                     <div *ngIf="nameOption === 'yes'" class="form-div">
                         <label for="name"><span class="required-symbol">* </span>Name:</label>
@@ -63,13 +66,27 @@
                     </div>
 
                     <div class="form-div">
-                        <label for="description"><span class="required-symbol">* </span>Bitte beschreiben Sie den Vorfall so detailliert wie möglich:</label>
-                        <textarea style="margin-top: 10px;" name="description" id="description" ngModel required></textarea>
+                        <label for="description"><span class="required-symbol">* </span>Bitte beschreiben Sie den
+                            Vorfall so detailliert wie möglich:</label>
+                        <textarea style="margin-top: 10px;" name="description" id="description" ngModel
+                            required></textarea>
                     </div>
 
-                    <button class="waves-effect waves-red btn-flat red darken-4" style="color: white;" type="submit" [disabled]="myForm.invalid">Submit</button>
+                    <button class="waves-effect waves-red btn-flat red darken-4" style="color: white;" type="submit"
+                        [disabled]="myForm.invalid">Absenden</button>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <!-- modal for submitted form -->
+    <div #modal1 id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Meldung Erstattet</h4>
+            <p>Die Meldung wurde erfolgreich übermittelt.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn-flat">OK</button>
         </div>
     </div>
 </main>
