@@ -40,3 +40,14 @@ footer a:hover {
     padding-bottom: 1%;
     background-color: lightgrey;
 }
+
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #b71c1c;
+}
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #b71c1c;
+}

@@ -8,17 +8,12 @@
   font-weight: bold;
 }
 
-[type="radio"]:checked+span.span-fail:after, [type="radio"].with-gap:checked+span.span-fail:after {
-  background-color: red;
-  border: 2px solid red;
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #b71c1c;
 }
-
-[type="radio"]:checked+span.span-nc:after, [type="radio"].with-gap:checked+span.span-nc:after {
-  background-color: orange;
-  border: 2px solid orange;
-}
-
-[type="radio"]:checked+span.span-na:after, [type="radio"].with-gap:checked+span.span-na:after {
-  background-color: #555;
-  border: 2px solid #555;
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #b71c1c;
 }
