@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { alerts } from '../AlertDatabase';
+import { alerts } from '../Model/AlertDatabase';
 
 @Component({
   selector: 'app-alert-site',

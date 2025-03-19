@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
-import { alerts } from '../AlertDatabase';
+import { alerts } from '../Model/AlertDatabase';
 
 @Component({
   selector: 'app-help-site',
