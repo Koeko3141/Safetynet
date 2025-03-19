@@ -1,6 +1,4 @@
 <div class="story-container">
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.content }}</p>
 
   <div class="radicalization-scale">
     <p>Radikalisierungsskala:</p>
@@ -18,9 +16,12 @@
     <!--<p>Aktueller Wert: {{ radicalizationScore() }}</p>-->
   </div>
 
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.content }}</p>
 
   @if (page.choices.length > 0) {
     <div class="choices-container">
+      <img *ngIf="pageImageUrl" [src]="pageImageUrl" alt="{{ page.title }}" class="story-image">
       @for (choice of page.choices; track choice) {
         <label class="choice" [class.selected]="selectedChoice === choice"
                (click)="choose(choice)">

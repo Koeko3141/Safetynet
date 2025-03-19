@@ -155,14 +155,6 @@
     ]
   },
   {
-    "pageNumber": 18,
-    "title": "Du hast deinen Kommentar abgegeben",
-    "content": "Du bekommst viele Kommentare dazu, dass du ein 'Gutmensch' bist und dass du keine Ahnung hast. Du ignorierst die Kommentare und schließt die App.",
-    "choices": [
-      { "text": "Willst du sehen, ob du das richtige gemacht hast?", "targetPageNumber": -1 , "points": 0}
-    ]
-  },
-  {
     "pageNumber": 19,
     "title": "Du hast deinen Kommentar abgegeben",
     "content": "Du beginnst weiterhin Streitigkeiten mit anderen Usern, welche deine Meinung nicht teilen. Du fühlst dich angegriffen und willst dich verteidigen.",

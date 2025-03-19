@@ -30,13 +30,23 @@ export class InteractiveStoryComponent {
   story = storyData;
   currentPage = signal(0);
   radicalizationScore = signal(0);
+  pageImage = signal<string>('');
   selectedChoice: Choice | null = null;
 
   get page(): Page {
-    return this.story.find(p => p.pageNumber === this.currentPage()) ?? {
-      pageNumber: -1, title: "Lade Story...", content: "", choices: []
-    };
+    const page = this.story.find(p => p.pageNumber === this.currentPage());
+    if (page) {
+      // Dynamisch den Bildpfad zuweisen, z.B. assets/webp/StoryPage1.webp, assets/webp/StoryPage2.webp, ...
+      return page;
+    }
+    return {pageNumber: -1, title: "Lade Story...", content: "", choices: []};
   }
+
+  get pageImageUrl(): string {
+    return `assets/story-images/storyPage${this.page.pageNumber}.webp`;
+  }
+
+
 
   choose(choice: Choice) {
     this.selectedChoice = choice;
@@ -89,5 +99,4 @@ export class InteractiveStoryComponent {
     if (score > 0) return 'red';    // z.B. Rot für rechte Auslenkung
     return 'transparent';           // Score == 0 => unsichtbar
   }
-
 }

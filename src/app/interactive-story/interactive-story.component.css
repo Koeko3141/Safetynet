@@ -98,3 +98,12 @@
     width 0.5s ease-in-out,
     background-color 0.5s ease-in-out;
 }
+
+.story-image {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 300px; /* Bild wird maximal 300px breit */
+  width: 100%;
+  height: auto;
+}
+
