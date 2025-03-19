@@ -1,22 +1,43 @@
 <div class="container">
   <h3 class="center-align">Self-Check Quiz</h3>
 
-  <div class="row">
+  <div class="row" *ngIf="!showFeedback">
     <div class="col s12">
-      <app-question
-        *ngFor="let q of questions"
-        class="card"
-        [question]="q.question"
-        [answers]="q.answers"
-        [correctAnswer]="q.correctAnswer"
-        [feedback]="q.feedback"
-        [isSelfCheck]="true"
-        (answerSelected)="onAnswerSelected(q.question, $event)">
-      </app-question>
+      <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
+        <app-question
+          class="card"
+          [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
+          [answers]="currentQuestion.answers"
+          [correctAnswer]="currentQuestion.correctAnswer"
+          [feedback]="currentQuestion.feedback"
+          [isSelfCheck]="true"
+          (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
+        </app-question>
+      </ng-container>
     </div>
   </div>
-  <button class="btn" (click)="evaluateQuiz()">Submit</button>
-  <div *ngIf="showFeedback">
-    <p>You got {{ correctCount }} out of {{ questions.length }} questions correct.</p>
+
+  <div class="row" *ngIf="!showFeedback && currentQuestionIndex === questions.length - 1">
+    <div class="col s12 center-align">
+      <button class="btn waves-effect waves-light red darken-4" (click)="evaluateQuiz()">Evaluate</button>
+    </div>
+  </div>
+
+  <div *ngIf="showFeedback" class="row">
+    <div class="col s12 m8 offset-m2">
+      <div class="card-panel red darken-4 white-text center-align">
+        <h4>{{ getTitle() }}</h4>
+        <p>Du hast <strong>{{ correctCount }}</strong> von <strong>{{ questions.length }}</strong> richtig.</p>
+
+        <div class="card red darken-2 center-align white-text result-box">
+          <h1 class="result-number">{{ correctCount }}</h1>
+          <p>Richtig</p>
+        </div>
+
+        <p class="result-message">{{ getMessage() }}</p>
+
+        <button class="btn waves-effect waves-light white black-text" (click)="showResults()">Neustart</button>
+      </div>
+    </div>
   </div>
 </div>
