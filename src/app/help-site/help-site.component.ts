@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule,NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-help-site',
@@ -10,7 +10,61 @@ import { FormsModule,NgForm } from '@angular/forms';
 })
 
 export class HelpSiteComponent {
-  onSubmit(form:NgForm){
-      console.log('Form Data: ', form.value)
+  wordBase = [
+    {
+      word: "bomb",
+      weigting: 0.8
+    },
+    {
+      word: "isis",
+      weigting: 0.9
+    },
+    {
+      word: "kill",
+      weigting: 0.75
+    },
+    {
+      word: "school",
+      weigting: 0.7
+    },
+    {
+      word: "friend",
+      weigting: 0.55
+    },
+    {
+      word: "nice",
+      weigting: 0.3
+    },
+  ]
+
+  onSubmit(form: NgForm) {
+    let singleWords = form.value.Description.split(" ")
+    let priority = 0
+    let found = false
+    let foundIndex=0
+
+    for (let sentenceIndex in singleWords) {
+      for (let wordBaseIndex in this.wordBase) {
+        if (singleWords[sentenceIndex].toLowerCase() === this.wordBase[wordBaseIndex].word) {
+          found = true
+          foundIndex=Number(wordBaseIndex)
+          break
+        }else{
+          found=false
+        }
+      }
+
+      if(found){
+        if(priority===0){
+          priority=this.wordBase[foundIndex].weigting
+        }else{
+          priority=priority*this.wordBase[foundIndex].weigting
+        }
+      }else{
+        priority=priority*0.5
+      }
     }
+    
+    console.log("Priority: "+priority)
+  }
 }
