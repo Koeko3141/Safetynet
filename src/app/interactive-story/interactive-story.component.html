@@ -1,1 +1,17 @@
-<p>interactive-story works!</p>
+<div class="story-container">
+  <h1>{{ page?.title }}</h1>
+  <p>{{ page?.content }}</p>
+
+  @if (page.choices.length > 0) {
+    <div>
+      @for (choice of page.choices; track choice) {
+        <button (click)="choose(choice)">
+          {{ choice.text }}
+        </button>
+      }
+    </div>
+  } @else {
+    <p>Ende der Geschichte!</p>
+    <button (click)="restartStory()">Neustart</button>
+  }
+</div>

@@ -1,0 +1,29 @@
+[
+  {
+    "pageNumber": 0,
+    "title": "Der Anfang",
+    "content": "Du stehst an einer Kreuzung. Welchen Weg wählst du?",
+    "choices": [
+      { "text": "Nach links gehen", "targetPageNumber": 1 },
+      { "text": "Nach rechts gehen", "targetPageNumber": 2 }
+    ]
+  },
+  {
+    "pageNumber": 1,
+    "title": "Der linke Pfad",
+    "content": "Du siehst eine alte Hütte.",
+    "choices": [
+      { "text": "Betrete die Hütte", "targetPageNumber": 3 },
+      { "text": "Geh zurück", "targetPageNumber": 0 }
+    ]
+  },
+  {
+    "pageNumber": 2,
+    "title": "Der rechte Pfad",
+    "content": "Du siehst einen alte Mann.",
+    "choices": [
+      { "text": "Hilfe rufen", "targetPageNumber": 3 },
+      { "text": "Geh zurück", "targetPageNumber": 0 }
+    ]
+  }
+]
