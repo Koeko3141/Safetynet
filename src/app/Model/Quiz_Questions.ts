@@ -1,4 +1,4 @@
-export let questions=[
+export let questionList=[
     {
         question:"Wie reagierst du, wenn jemand eine andere politische Meinung äußert, die du nicht teilst?",
         answers:[

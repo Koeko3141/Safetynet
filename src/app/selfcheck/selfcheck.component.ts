@@ -14,9 +14,9 @@ export class SelfcheckComponent {
     {
       question: "What is the capital of Italy?",
       answers: [
-        { text: "Rome", weight: 100 },
-        { text: "Paris", weight: 0 },
-        { text: "Berlin", weight: 0 },
+        { text: "Rome", weight: 1 },
+        { text: "Paris", weight: 0.5 },
+        { text: "Berlin", weight: 0.5 },
         { text: "Madrid", weight: 0 }
       ],
       correctAnswer: "Rome",
@@ -25,10 +25,10 @@ export class SelfcheckComponent {
     {
       question: "What is the capital of Germany?",
       answers: [
-        { text: "Rome", weight: 0 },
+        { text: "Rome", weight: 0.5 },
         { text: "Paris", weight: 0 },
-        { text: "Berlin", weight: 100 },
-        { text: "Madrid", weight: 0 }
+        { text: "Berlin", weight: 1 },
+        { text: "Madrid", weight: 0.5 }
 
       ],
       correctAnswer: "Berlin",
@@ -57,16 +57,18 @@ export class SelfcheckComponent {
   }
 
   evaluateQuiz() {
+    let totalWeight = 0;
     this.questions.forEach(q => {
-      if (this.selectedAnswers[q.question] === q.correctAnswer) {
-        this.correctCount++;
+      const selectedAnswer = this.selectedAnswers[q.question];
+      const answer = q.answers.find(a => a.text === selectedAnswer);
+      if (answer) {
+        totalWeight += answer.weight;
       }
     });
-    this.correctPercentage = Math.round(this.correctCount / this.questions.length * 100);
-    console.log(`Correct Count: ${this.correctCount}, Correct Percentage: ${this.correctPercentage}%`);
+    this.correctPercentage = Math.round(totalWeight / this.questions.length * 100);
+    console.log(`Total Weight: ${totalWeight}, Correct Percentage: ${this.correctPercentage}%`);
     this.showFeedback = true;
   }
-
 
   showResults() {
     this.showFeedback = false;
@@ -82,11 +84,11 @@ export class SelfcheckComponent {
 
   getMessage(): string {
     if (this.correctPercentage <= 30) {
-      return "Gefährdung.";
+      return "Sie haben eine hohe Gefahr, radikalisiert zu werden. Es ist wichtig, dass Sie sofort die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch nehmen, um sich und andere zu schützen.";
     }
     if (this.correctPercentage <= 60) {
-      return "Mittelmäßig";
+      return "Sie haben eine moderate Gefahr, radikalisiert zu werden. Wir empfehlen Ihnen, die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch zu nehmen, um sich besser zu schützen.";
     }
-    return "Kein Risiko.";
+    return "Sie haben keine Gefährdung, radikalisiert zu werden. Bitte bleiben Sie dennoch aufmerksam und informieren Sie sich regelmäßig über aktuelle Entwicklungen.";
   }
 }

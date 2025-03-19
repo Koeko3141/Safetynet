@@ -19,6 +19,8 @@ export class QuestionComponent {
   @Input() feedback: string = "";
   @Input() isSelfCheck: boolean = false;
   @Output() answerSelected = new EventEmitter<string>();
+  @Output() nextQuestion = new EventEmitter<void>();
+
 
   selectedAnswer: string | null = null;
   showFeedback: boolean = false;

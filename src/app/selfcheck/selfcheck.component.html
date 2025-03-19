@@ -17,21 +17,15 @@
     </div>
   </div>
 
-  <div class="row" *ngIf="!showFeedback && currentQuestionIndex === questions.length - 1">
-    <div class="col s12 center-align">
-      <button class="btn waves-effect waves-light red darken-4" (click)="evaluateQuiz()">Evaluate</button>
-    </div>
-  </div>
-
   <div *ngIf="showFeedback" class="row">
     <div class="col s12 m8 offset-m2">
-      <div class="card-panel red darken-4 white-text center-align">
+      <div class="card-panel grey darken-1 white-text center-align">
         <h4>{{ getTitle() }}</h4>
-        <p>Du hast <strong>{{ correctCount }}</strong> von <strong>{{ questions.length }}</strong> richtig.</p>
 
-        <div class="card red darken-2 center-align white-text result-box">
-          <h1 class="result-number">{{ correctCount }}</h1>
-          <p>Richtig</p>
+        <div class="card red darken-4 center-align white-text result-box">
+          <p>Der Test war zu </p>
+          <h1 class="result-number">{{ correctPercentage }}</h1>
+          <p>Prozent richtig.</p>
         </div>
 
         <p class="result-message">{{ getMessage() }}</p>
