@@ -1,61 +1,62 @@
-<div class="story-container">
+<main>
+  <div class="story-container">
 
-  <div class="radicalization-scale">
-    <p>Radikalisierungsskala:</p>
-    <div class="scale">
-      <span class="left-label">Links</span>
-      <div class="progress-container">
-        <div class="progress-bar"
-             [style.left]="progressBarLeft()"
-             [style.width]="progressBarWidth()"
-             [style.backgroundColor]="progressBarColor()">
+    <div class="radicalization-scale">
+      <p>Radikalisierungsskala:</p>
+      <div class="scale">
+        <span class="left-label">Links</span>
+        <div class="progress-container">
+          <div class="progress-bar" [style.left]="progressBarLeft()" [style.width]="progressBarWidth()"
+            [style.backgroundColor]="progressBarColor()">
+          </div>
         </div>
+        <span class="right-label">Rechts</span>
       </div>
-      <span class="right-label">Rechts</span>
     </div>
-  </div>
 
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.content }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.content }}</p>
 
-  @if (page.choices.length > 0) {
+    @if (page.choices.length > 0) {
     <div class="choices-container">
       <img *ngIf="pageImageUrl" [src]="pageImageUrl" alt="{{ page.title }}" class="story-image">
       @for (choice of page.choices; track choice) {
-        <label class="choice" [class.selected]="selectedChoice === choice"
-               (click)="choose(choice)">
-          <input type="radio" name="story-choice" [checked]="selectedChoice === choice">
-          <span class="choice-text">{{ choice.text }}</span>
-        </label>
+      <label class="choice" [class.selected]="selectedChoice === choice" (click)="choose(choice)">
+        <input class="with-gap" type="radio" name="story-choice" [checked]="selectedChoice === choice">
+        <span class="choice-text">{{ choice.text }}</span>
+      </label>
       }
     </div>
-    <button class="waves-effect waves-red btn-flat red darken-4" style="margin-top: 30px; color: azure" (click)="confirmChoice()" [disabled]="!selectedChoice">
-      OKAY
+    <button class="waves-effect waves-red btn-flat red darken-4" style="margin-top: 30px; color: azure"
+      (click)="confirmChoice()" [disabled]="!selectedChoice">
+      Bestätigen
     </button>
-  } @else {
+    } @else {
     <p>Ende der Geschichte!</p>
     <!-- Positive (rechte) Tendenz -->
     @if (radicalizationScore() > 15) {
-      <p>Du bist in einer starken rechten Filterblase gefangen und bist kaum noch offen für andere Perspektiven.</p>
+    <p>Du bist in einer starken rechten Filterblase gefangen und bist kaum noch offen für andere Perspektiven.</p>
     } @else if (radicalizationScore() > 10) {
-      <p>Deine Kommentare werden zunehmend aggressiver. Du suchst aktiv nach Bestätigung in radikalen Kreisen.</p>
+    <p>Deine Kommentare werden zunehmend aggressiver. Du suchst aktiv nach Bestätigung in radikalen Kreisen.</p>
     } @else if (radicalizationScore() > 5) {
-      <p>Du fühlst dich zunehmend in rechten Meinungen bestätigt und siehst Andersdenkende kritischer.</p>
-    } @else if (radicalizationScore() > 0 && radicalizationScore() < 5) {
-      <p>Aktuell hast du keine ausgeprägte radikale Tendenz nach rechts.</p>
-    }
+    <p>Du fühlst dich zunehmend in rechten Meinungen bestätigt und siehst Andersdenkende kritischer.</p>
+    } @else if (radicalizationScore() > 0 && radicalizationScore() < 5) { <p>Aktuell hast du keine ausgeprägte radikale
+      Tendenz nach rechts.</p>
+      }
 
-    <!-- Negative (linke) Tendenz -->
-    @if (radicalizationScore() < -15) {
-      <p>Du bist in einer extrem linken Filterblase gefangen und lehnst andere Ansichten kategorisch ab.</p>
-    } @else if (radicalizationScore() < -10) {
-      <p>Deine linken Überzeugungen radikalisieren sich. Du zeigst kaum noch Verständnis für abweichende Meinungen.</p>
-    } @else if (radicalizationScore() < -5) {
-      <p>Du lehnst konservative Ansichten zunehmend ab und suchst vor allem linke Alternativen.</p>
-    } @else if (radicalizationScore() > -5 && radicalizationScore() < 0) {
-      <p>Aktuell hast du keine ausgeprägte radikale Tendenz nach links.</p>
-    }
+      <!-- Negative (linke) Tendenz -->
+      @if (radicalizationScore() < -15) { <p>Du bist in einer extrem linken Filterblase gefangen und lehnst andere
+        Ansichten kategorisch ab.</p>
+        } @else if (radicalizationScore() < -10) { <p>Deine linken Überzeugungen radikalisieren sich. Du zeigst kaum
+          noch Verständnis für abweichende Meinungen.</p>
+          } @else if (radicalizationScore() < -5) { <p>Du lehnst konservative Ansichten zunehmend ab und suchst vor
+            allem linke Alternativen.</p>
+            } @else if (radicalizationScore() > -5 && radicalizationScore() < 0) { <p>Aktuell hast du keine ausgeprägte
+              radikale Tendenz nach links.</p>
+              }
 
-    <button class="waves-effect waves-red btn-flat red darken-4" style="margin-top: 30px; color: azure" (click)="restartStory()">Neustart</button>
-  }
-</div>
+              <button class="waves-effect waves-red btn-flat red darken-4" style="margin-top: 30px; color: azure"
+                (click)="restartStory()">Neustart</button>
+              }
+  </div>
+</main>
