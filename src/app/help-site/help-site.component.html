@@ -1,19 +1,49 @@
-<p>Tel: +43 1234567</p>
-<p>Mail: BMI.at</p>
-<p>Anonymous Hint</p>
+<main>
+    <div class="light-container">
+        <div class="container">
+    
+            <div class="card-panel white z-depth-0 custom-box">
+                <p>Tel: +43 1234567</p>
+                <p>Mail: BMI.at</p>
+                <p>Anonymous Hint</p>
+            </div>
+        </div>
+    </div>
+    <div class="dark-container">
+        <div class="container">
+            <div class="card-panel white z-depth-0 custom-box">
+                <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+                    <div>
+                        <label for="subject"><span class="required-symbol">* </span>Betreff:</label>
+                        <input type="text" id="subject" name="subject" ngModel required>
+                    </div>
 
-<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" ngModel required>
+                    <div>
+                        <label><span class="required-symbol">* </span>Möchten Sie Ihren Namen angeben?</label>
+                        <div>
+                            <label for="nameYes">
+                                <input type="radio" id="nameYes" name="nameOption" [(ngModel)]="nameOption" value="yes"> Ja
+                            </label>
+                            <label for="nameNo">
+                                <input type="radio" id="nameNo" name="nameOption" [(ngModel)]="nameOption" value="no" checked> Nein
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- show name field only if nameOption is yes -->
+                    <div *ngIf="nameOption === 'yes'">
+                        <label for="name"><span class="required-symbol">* </span>Name:</label>
+                        <input type="text" id="name" name="name" [(ngModel)]="name" required>
+                    </div>
+
+                    <div>
+                        <label for="description"><span class="required-symbol">* </span>Bitte beschreiben Sie den Vorfall so detailliert wie möglich:</label>
+                        <textarea name="description" id="description" ngModel required></textarea>
+                    </div>
+
+                    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" ngModel required>
-    </div>
-    <div>
-        <label for="Description">Description</label>
-        <textarea name="Description" id="Description" ngModel required></textarea>
-    </div>
-    <button type="submit" [disabled]="myForm.invalid">Submit</button>
-</form>
+<main>

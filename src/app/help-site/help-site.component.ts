@@ -1,15 +1,19 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-help-site',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './help-site.component.html',
   styleUrl: './help-site.component.css'
 })
 
 export class HelpSiteComponent {
+  nameOption: string = 'no'; // Standardwert: "Nein" vorausgewählt
+  name: string = '';
+
   wordBase = [
     {
       word: "bomb",
