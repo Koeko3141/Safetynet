@@ -17,7 +17,7 @@ export class LearningQuizComponent {
   questions = questionList;
 
   onAnswerSelected(question: string, answer: string) {
-    const currentQuestion = question[this.currentQuestionIndex];
+    const currentQuestion = this.questions[this.currentQuestionIndex];
     if (answer === currentQuestion.correctAnswer) {
       this.correctCounter++;
     }

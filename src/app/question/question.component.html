@@ -12,8 +12,7 @@
     </label>
   </li>
 </ul>
-<button *ngIf="!isSelfCheck" class="btn red darken-4" (click)="learnSubmitAnswer('answer.text', $event)">Okay</button>
-<button *ngIf="isSelfCheck && !showFeedback" class="btn red darken-4" (click)="selfSubmitAnswer(selectedAnswer, $event)">Next</button>
+<button class="btn red darken-4" (click)="learnSubmitAnswer('answer.text', $event)">Okay</button>
 <div *ngIf="showFeedback">
   <p [ngClass]="{'correct-answer': isCorrect, 'wrong-answer': !isCorrect}">
     {{ isCorrect ? 'Correct!' : 'Incorrect!' }}

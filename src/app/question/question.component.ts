@@ -14,25 +14,16 @@ import { NgForOf, NgClass, NgIf } from '@angular/common';
 })
 export class QuestionComponent {
   @Input() question: string = "";
-  @Input() answers: { text: string, weight: number }[] = [];
+  @Input() answers: { text: string, feedback: string }[] = [];
   @Input() correctAnswer: string = "";
-  @Input() feedback: string = "";
-  @Input() isSelfCheck: boolean = false;
+  @Input() feedback: string = "";;
   @Output() answerSelected = new EventEmitter<string>();
   @Output() nextQuestion = new EventEmitter<void>();
-
 
   selectedAnswer: string | null = null;
   showFeedback: boolean = false;
   isCorrect: boolean = false;
   radioDisabled: boolean = false;
-
-  selfSubmitAnswer(answer: string | null, event: Event) {
-    this.selectedAnswer = answer;
-
-    this.answerSelected.emit(answer ?? undefined);
-    event.stopPropagation();
-  }
 
   learnSubmitAnswer(answer: string, event: Event) {
     if(!this.radioDisabled) {
@@ -65,6 +56,9 @@ export class QuestionComponent {
       this.isCorrect = this.selectedAnswer === this.correctAnswer;
       this.showFeedback = true;
       this.radioDisabled = true;
+      this.answers.forEach(element => {
+        if(element.text == this.selectedAnswer) this.feedback = element.feedback;
+      });
     }
   }
 }

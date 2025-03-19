@@ -1,0 +1,13 @@
+<ul class="collection">
+    <p style="margin-left: 3%;">{{ question }}</p>
+    <li *ngFor="let answer of answers" class="collection-item">
+      <label>
+        <input class="with-gap red darken-4"
+          type="radio"
+          [name]="question"
+          (click)="selectAnswer(answer.answer)"
+        />
+      </label>
+    </li>
+  </ul>
+  <button class="btn red darken-4" (click)="selfSubmitAnswer(selectedAnswer, $event)">Next</button>
