@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { alerts } from '../AlertDatabase';
 
 @Component({
   selector: 'app-help-site',
@@ -42,7 +43,7 @@ export class HelpSiteComponent {
   ]
 
   onSubmit(form: NgForm) {
-    let singleWords = form.value.Description.split(" ")
+    let singleWords = form.value.description.split(" ")
     let priority = 0
     let found = false
     let foundIndex=0
@@ -69,6 +70,12 @@ export class HelpSiteComponent {
       }
     }
     
-    console.log("Priority: "+priority)
+    alerts.push({
+      subject:form.value.subject,
+      name:form.value.name,
+      description:form.value.description,
+      priority:priority
+    })
+    alerts.sort((a, b) => b.priority - a.priority)
   }
 }
