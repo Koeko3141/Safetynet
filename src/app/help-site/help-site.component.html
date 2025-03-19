@@ -1,7 +1,7 @@
 <main>
     <div class="light-container">
         <div class="container">
-
+    
             <div class="card-panel white z-depth-0 custom-box">
                 <p>Tel: +43 1234567</p>
                 <p>Mail: BMI.at</p>
@@ -13,40 +13,49 @@
         <div class="container">
             <div class="card-panel white z-depth-0 custom-box">
                 <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
-                    <div>
-                        <label for="subject"><span class="required-symbol">* </span>Betreff:</label>
-                        <input type="text" id="subject" name="subject" ngModel required>
+                    <div class="info">
+                        <span class="required-symbol">* </span>Pflichtfeld
                     </div>
 
-                    <div>
+
+                    <div class="form-div">
+                        <label for="subject"><span class="required-symbol">* </span>Betreff:</label>
+                        <input class="text-input" type="text" id="subject" name="subject" ngModel required>
+                    </div>
+
+                    <div class="form-div">
                         <label><span class="required-symbol">* </span>Möchten Sie Ihren Namen angeben?</label>
-                        <div>
+                        <div style="margin-top: 10px;">
                             <label for="nameYes">
                                 <input type="radio" class="with-gap red darken-4" id="nameYes" name="nameOption" [(ngModel)]="nameOption" value="yes">
-                                <span>Ja</span>
+                                <span style="font-weight: normal;">Ja</span>
                             </label>
                             <br>
                             <label for="nameNo">
                                 <input type="radio" class="with-gap red darken-4" id="nameNo" name="nameOption" [(ngModel)]="nameOption" value="no" checked>
-                                <span>Nein</span>
+                                <span style="font-weight: normal;">Nein</span>
                             </label>
                         </div>
                     </div>
 
+                    <div *ngIf="nameOption === 'yes'" class="form-div">
+                        <p style="margin: 0">Beachten Sie, dass Sie Ihre Anonymität freiwillig aufgeben.</p>
+                    </div>
+                    
                     <!-- show name field only if nameOption is yes -->
-                    <div *ngIf="nameOption === 'yes'">
+                    <div *ngIf="nameOption === 'yes'" class="form-div">
                         <label for="name"><span class="required-symbol">* </span>Name:</label>
-                        <input type="text" id="name" name="name" [(ngModel)]="name" required>
+                        <input class="text-input" type="text" id="name" name="name" [(ngModel)]="name" required>
                     </div>
 
-                    <div>
+                    <div class="form-div">
                         <label for="description"><span class="required-symbol">* </span>Bitte beschreiben Sie den Vorfall so detailliert wie möglich:</label>
-                        <textarea name="description" id="description" ngModel required></textarea>
+                        <textarea style="margin-top: 10px;" name="description" id="description" ngModel required></textarea>
                     </div>
 
-                    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+                    <button class="waves-effect waves-red btn-flat red darken-4" style="color: white;" type="submit" [disabled]="myForm.invalid">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-</main>
+<main>
