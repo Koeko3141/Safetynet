@@ -15,9 +15,10 @@ export class HelpSiteComponent {
   nameOption: string = 'no'; // Standardwert: "Nein" vorausgewählt
   name: string = '';
 
+  //static data for testing
   wordBase = [
     {
-      word: "bomb",
+      word: "bombe",
       weigting: 0.8
     },
     {
@@ -25,19 +26,19 @@ export class HelpSiteComponent {
       weigting: 0.9
     },
     {
-      word: "kill",
+      word: "töten",
       weigting: 0.75
     },
     {
-      word: "school",
+      word: "schule",
       weigting: 0.7
     },
     {
-      word: "friend",
+      word: "freund",
       weigting: 0.55
     },
     {
-      word: "nice",
+      word: "nett",
       weigting: 0.3
     },
   ]
@@ -66,7 +67,7 @@ export class HelpSiteComponent {
           priority=priority*this.wordBase[foundIndex].weigting
         }
       }else{
-        priority=priority*0.5
+        priority=priority*1
       }
     }
     
@@ -77,5 +78,7 @@ export class HelpSiteComponent {
       priority:priority
     })
     alerts.sort((a, b) => b.priority - a.priority)
+
+    console.log(alerts)
   }
 }
