@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { alerts } from '../AlertDatabase';
 
@@ -10,6 +10,10 @@ import { alerts } from '../AlertDatabase';
   styleUrl: './alert-site.component.css'
 })
 
-export class AlertSiteComponent {
+export class AlertSiteComponent implements OnInit {
   data = alerts
+
+  ngOnInit(): void {
+    alerts.sort((a, b) => b.priority - a.priority)
+  }
 }
