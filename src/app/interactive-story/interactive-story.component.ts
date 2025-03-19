@@ -46,8 +46,6 @@ export class InteractiveStoryComponent {
     return `assets/story-images/storyPage${this.page.pageNumber}.webp`;
   }
 
-
-
   choose(choice: Choice) {
     this.selectedChoice = choice;
   }
