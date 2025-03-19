@@ -2,13 +2,13 @@ export let alerts = [
   {
     subject: "",
     name: "Konstantin",
-    description: "Very bad",
+    description: "Große Gefahr",
     priority: 0.6
   },
   {
     subject: "",
     name: "Mihael",
-    description: "bad",
+    description: "Hat ein Schwert",
     priority: 0.3
   },
   {
