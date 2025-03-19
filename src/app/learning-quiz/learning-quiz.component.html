@@ -3,16 +3,17 @@
 
   <div class="row">
     <div class="col s12">
-      <app-question
-        *ngFor="let q of questions"
-        class="card"
-        [question]="q.question"
-        [answers]="q.answers"
-        [correctAnswer]="q.correctAnswer"
-        [feedback]="q.feedback"
-        [isSelfCheck]="false"
-        (answerSelected)="onAnswerSelected(q.question, $event)">
-      </app-question>
+      <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
+        <app-question
+          class="card"
+          [question]="currentQuestion.question"
+          [answers]="currentQuestion.answers"
+          [correctAnswer]="currentQuestion.correctAnswer"
+          [feedback]="currentQuestion.feedback"
+          [isSelfCheck]="false"
+          (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
+        </app-question>
+      </ng-container>
     </div>
   </div>
 </div>

@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { QuestionComponent } from '../question/question.component';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-learning-quiz',
   standalone: true,
-  imports: [QuestionComponent, NgForOf],
+  imports: [QuestionComponent, NgIf],
   templateUrl: './learning-quiz.component.html',
   styleUrls: ['./learning-quiz.component.css']
 })
 export class LearningQuizComponent {
+  currentQuestionIndex: number = 0
   questions = [
     {
       question: "What is the capital of France?",
@@ -37,5 +38,6 @@ export class LearningQuizComponent {
 
   onAnswerSelected(question: string, answer: string) {
     // Handle any additional logic when an answer is selected
+    console.log("test")
   }
 }
