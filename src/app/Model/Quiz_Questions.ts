@@ -14,7 +14,8 @@ export let questions=[
                 answer:"Ich beginne sofort, die Person zu kritisieren oder anzugreifen.",
                 feedback:"Vorsicht! Das führt oft nur zu Streit, statt zu einem echten Austausch."
             },
-        ]
+        ],
+        correctAnswer:"Ich höre zu und versuche, die Perspektive zu verstehen."
     },
     {
         question:"Wenn du von einer Nachricht hörst, die eine Gruppe betrifft, die du nicht magst, wie fühlst du dich?",
@@ -31,7 +32,8 @@ export let questions=[
                 answer:"Ich bin froh, dass diese Gruppe in Schwierigkeiten ist und teile diese Meinung mit anderen.",
                 feedback:"Das ist riskant, weil es eher zu Spaltung als zu Lösungen führt"
             },
-        ]
+        ],
+        correctAnswer:"Ich versuche, beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde."
     },
     {
         question:"Wie reagierst du, wenn dir jemand in einem Gespräch widerspricht?",
@@ -48,7 +50,8 @@ export let questions=[
                 answer:"Ich werde aggressiv und versuche, den anderen zu überzeugen, dass er falsch ist.",
                 feedback:"Das wird eher abschreckend wirken. Ruhige Argumente sind oft überzeugender."
             },
-        ]
+        ],
+        correctAnswer:"Ich respektiere die Meinung des anderen und führe das Gespräch ruhig weiter."
     },
     {
         question:"Wenn du mit extremen Ansichten konfrontiert wirst, wie reagierst du?",
@@ -65,7 +68,8 @@ export let questions=[
                 answer:"Ich stimme zu oder verteidige die extremen Ansichten, um meinen Standpunkt zu beweisen.",
                 feedback:"Vorsicht, das kann gefährlich sein! Besser ist es, kritisch zu hinterfragen."
             },
-        ]
+        ],
+        correctAnswer:"Ich versuche, ruhig und respektvoll mit der Person zu sprechen und zu verstehen, warum sie diese Ansichten hat."
     },
     {
         question:"Wie würdest du reagieren, wenn du in einer Gruppe von Menschen bist, die Hassreden oder diskriminierende Kommentare äußern?",
@@ -82,7 +86,8 @@ export let questions=[
                 answer:"Ich stimme den Kommentaren zu oder mache keine Einwände.",
                 feedback:"Bedenklich, weil Schweigen oft als Zustimmung gewertet wird."
             },
-        ]
+        ],
+        correctAnswer:"Ich spreche mich gegen die Aussagen aus und fordere respektvolle Kommunikation."
     },
     {
         question:"Wie würdest du reagieren, wenn du in einem Klub feiern bist und eine Person öfters Radikalisierte Sachen durchführt?",
@@ -99,6 +104,7 @@ export let questions=[
                 answer:"Ich gehe zur Person und unterstütze sie dabei und mache wenn möglich mit.",
                 feedback:"Gefährlich! Das kann ernste Konsequenzen haben, sei vorsichtig, mit wem du dich einlässt."
             },
-        ]
+        ],
+        correctAnswer:"Ich würde mich an die Polizei wenden und Ihnen genau den Vorfall schildern."
     },
 ]
