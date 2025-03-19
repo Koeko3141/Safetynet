@@ -25,7 +25,14 @@ export class QuestionComponent {
   isCorrect: boolean = false;
   radioDisabled: boolean = false;
 
-  submitAnswer(answer: string, event: Event) {
+  selfSubmitAnswer(answer: string | null, event: Event) {
+    this.selectedAnswer = answer;
+
+    this.answerSelected.emit(answer ?? undefined);
+    event.stopPropagation();
+  }
+
+  learnSubmitAnswer(answer: string, event: Event) {
     if(!this.radioDisabled) {
       this.showAnswerFeedback();
     }

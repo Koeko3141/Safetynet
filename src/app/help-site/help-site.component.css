@@ -4,4 +4,37 @@
 
 label {
     font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    min-height: 5em;
+    resize: vertical;
+}
+
+.form-div {
+    margin-bottom: 30px;
+}
+
+.text-input {
+    margin-top: 10px !important;
+    border: 1px solid black !important;
+}
+
+.info{
+    text-align: right;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid black !important;
+    box-shadow: none !important;
+}
+
+input.valid, input.invalid, textarea.valid, textarea.invalid {
+    border: 2px solid black !important;
+    box-shadow: none !important;
 }
