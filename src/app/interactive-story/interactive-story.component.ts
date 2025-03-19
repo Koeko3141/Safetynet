@@ -1,10 +1,11 @@
-import {Component, signal} from '@angular/core';
+import { Component, signal } from '@angular/core';
 import storyData from './story.json';
-import {NgForOf, NgIf} from "@angular/common";
+import { CommonModule, NgForOf, NgIf } from '@angular/common';
 
 class Choice {
   text: string = '';
-  targetPageNumber: number = 0;  // Standardwert 0
+  targetPageNumber: number = 0;
+  points: number = 0;
 }
 
 class Page {
@@ -18,6 +19,7 @@ class Page {
   selector: 'app-interactive-story',
   standalone: true,
   imports: [
+    CommonModule,
     NgIf,
     NgForOf
   ],
@@ -25,9 +27,10 @@ class Page {
   styleUrl: './interactive-story.component.css'
 })
 export class InteractiveStoryComponent {
-
-  story: Page[] = storyData; // ✅ JSON-Daten in die Story laden
-  currentPage = signal(0);  // Startseite
+  story = storyData;
+  currentPage = signal(0);
+  radicalizationScore = signal(0);
+  selectedChoice: Choice | null = null;
 
   get page(): Page {
     return this.story.find(p => p.pageNumber === this.currentPage()) ?? {
@@ -35,12 +38,56 @@ export class InteractiveStoryComponent {
     };
   }
 
-
   choose(choice: Choice) {
-    this.currentPage.set(choice.targetPageNumber);
+    this.selectedChoice = choice;
+  }
+
+  confirmChoice() {
+    if (this.selectedChoice) {
+      this.radicalizationScore.set(this.radicalizationScore() + this.selectedChoice.points);
+      this.currentPage.set(this.selectedChoice.targetPageNumber);
+      this.selectedChoice = null;
+    }
   }
 
   restartStory() {
     this.currentPage.set(0);
+    this.radicalizationScore.set(0);
+    this.selectedChoice = null;
   }
+
+  progressBarWidth(): string {
+    // Score kann von -40 bis +40 gehen
+    // fraction ist Wert zwischen 0 und 1
+    const fraction = Math.min(Math.abs(this.radicalizationScore()) / 40, 1);
+    // Wir erlauben maximal 50% Breite (also bis zur Mitte)
+    return (fraction * 50) + '%';
+  }
+
+  progressBarLeft(): string {
+    const score = this.radicalizationScore();
+
+    if (score < 0) {
+      // Bei negativem Score soll der Balken nach links wachsen.
+      // offset = Anteil an den 50%
+      const fraction = Math.min(Math.abs(score) / 40, 1);
+      const offset = fraction * 50;
+      // Die linke Kante = 50% - offset
+      // Beispiel: Score = -40 => offset = 50 => left = 0%
+      //           Score = -20 => offset = 25 => left = 25%
+      return (50 - offset) + '%';
+    } else {
+      // Score >= 0 => Balken wächst nach rechts.
+      // Dann ist die linke Kante immer bei 50%.
+      return '50%';
+    }
+  }
+
+  progressBarColor(): string {
+    const score = this.radicalizationScore();
+    if (score < 0) return 'blue';   // z.B. Blau für linke Auslenkung
+    if (score > 0) return 'red';    // z.B. Rot für rechte Auslenkung
+    return 'transparent';           // Score == 0 => unsichtbar
+  }
+
 }
