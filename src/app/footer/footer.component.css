@@ -13,3 +13,17 @@
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 1000px) {
+    .footer-container {
+        font-size: 12px;
+    }
+
+    .footer-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+    }
+}

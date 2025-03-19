@@ -13,7 +13,7 @@ declare var M: any; // Materialize-Framework
   styleUrl: './help-site.component.css'
 })
 export class HelpSiteComponent {
-  nameOption: string = 'no'; // Standardwert: "Nein" vorausgewählt
+  nameOption: string = 'no';
   name: string = '';
 
   @ViewChild('modal1') modalElement!: ElementRef;
@@ -29,7 +29,9 @@ export class HelpSiteComponent {
   ];
 
   ngAfterViewInit() {
-    M.Modal.init(this.modalElement.nativeElement); // Initialisiere das Modal nach dem Laden der Komponente
+    if (typeof M !== 'undefined') {
+      M.Modal.init(this.modalElement.nativeElement);
+    }
   }
 
   onSubmit(form: NgForm) {
@@ -71,12 +73,12 @@ export class HelpSiteComponent {
 
     console.log(alerts);
 
-    // Öffne das Modal
+    // open modal upon sending form
     const modalInstance = M.Modal.getInstance(this.modalElement.nativeElement);
     modalInstance.open();
 
-    // Formular zurücksetzen
+    // reset form
     form.resetForm();
-    this.nameOption = 'no'; // Standardwert für Name-Option zurücksetzen
+    this.nameOption = 'no';
   }
 }
