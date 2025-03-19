@@ -22,10 +22,13 @@
                         <label><span class="required-symbol">* </span>Möchten Sie Ihren Namen angeben?</label>
                         <div>
                             <label for="nameYes">
-                                <input type="radio" id="nameYes" name="nameOption" [(ngModel)]="nameOption" value="yes"> Ja
+                                <input type="radio" class="with-gap red darken-4" id="nameYes" name="nameOption" [(ngModel)]="nameOption" value="yes">
+                                <span>Ja</span>
                             </label>
+                            <br>
                             <label for="nameNo">
-                                <input type="radio" id="nameNo" name="nameOption" [(ngModel)]="nameOption" value="no" checked> Nein
+                                <input type="radio" class="with-gap red darken-4" id="nameNo" name="nameOption" [(ngModel)]="nameOption" value="no" checked>
+                                <span>Nein</span>
                             </label>
                         </div>
                     </div>
