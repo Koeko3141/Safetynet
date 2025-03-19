@@ -19,10 +19,11 @@ export class QuestionComponent {
   @Input() feedback: string = "";
   @Input() isSelfCheck: boolean = false;
   @Output() answerSelected = new EventEmitter<string>();
-  @Output() showFeedback: boolean = false; // default -> to be adapted
-  @Output() isCorrect: boolean = false; // default -> to be adapted
 
   selectedAnswer: string | null = null;
+  showFeedback: boolean = false;
+  isCorrect: boolean = false;
+  radioDisabled: boolean = false;
 
   selectAnswer(answer: string, event: Event) {
     event.stopPropagation(); // Prevent bubbling issues
@@ -31,7 +32,7 @@ export class QuestionComponent {
   }
 
   getAnswerClass(answer: string): string {
-    if (this.selectedAnswer === null) return "";
+    if (this.selectedAnswer === null || !this.radioDisabled) return "";
     if (answer === this.correctAnswer) {
       return "correct-answer"; // Green highlight
     } else if (answer === this.selectedAnswer) {
@@ -41,8 +42,10 @@ export class QuestionComponent {
   }
 
   showAnswerFeedback() {
-
+    if (this.selectedAnswer !== null) {
+      this.isCorrect = this.selectedAnswer === this.correctAnswer;
+      this.showFeedback = true;
+      this.radioDisabled = true;
+    }
   }
-
-
 }
