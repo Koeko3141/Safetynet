@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { QuestionComponent } from '../question/question.component';
-import { NgForOf } from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-selfcheck',
   standalone: true,
-  imports: [QuestionComponent, NgForOf],
+  imports: [QuestionComponent, NgForOf, NgIf],
   templateUrl: './selfcheck.component.html',
   styleUrls: ['./selfcheck.component.css']
 })
@@ -29,6 +29,7 @@ export class SelfcheckComponent {
         { text: "Paris", weight: 0 },
         { text: "Berlin", weight: 100 },
         { text: "Madrid", weight: 0 }
+
       ],
       correctAnswer: "Berlin",
       feedback: "Berlin is the capital of Germany."

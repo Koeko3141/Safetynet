@@ -1,0 +1,15 @@
+.footer-container {
+    height: 40px;
+    padding-top: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
