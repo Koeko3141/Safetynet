@@ -39,7 +39,7 @@ export class InteractiveStoryComponent {
       // Dynamisch den Bildpfad zuweisen, z.B. assets/webp/StoryPage1.webp, assets/webp/StoryPage2.webp, ...
       return page;
     }
-    return {pageNumber: -1, title: "Lade Story...", content: "", choices: []};
+    return {pageNumber: -1, title: "The End", content: "", choices: []};
   }
 
   get pageImageUrl(): string {
