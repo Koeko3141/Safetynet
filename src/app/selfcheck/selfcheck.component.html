@@ -1,34 +1,34 @@
-<div class="container">
-  <h3 class="center-align">Self-Check Quiz</h3>
+<main>
+  <div class="container">
+    <h3 class="center-align">Self-Check Quiz</h3>
 
-  <div class="row" *ngIf="!showFeedback">
-    <div class="col s12">
-      <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
-        <app-self-check-question
-          class="card"
-          [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
-          [answers]="currentQuestion.answers"
-          (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
-        </app-self-check-question>
-      </ng-container>
+    <div class="row" *ngIf="!showFeedback">
+      <div class="col s12">
+        <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
+          <app-self-check-question class="card"
+            [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
+            [answers]="currentQuestion.answers" (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
+          </app-self-check-question>
+        </ng-container>
+      </div>
     </div>
-  </div>
 
-  <div *ngIf="showFeedback" class="row">
-    <div class="col s12 m8 offset-m2">
-      <div class="card-panel grey darken-1 white-text center-align">
-        <h4>{{ getTitle() }}</h4>
+    <div *ngIf="showFeedback" class="row">
+      <div class="col s12 m8 offset-m2">
+        <div class="card-panel grey darken-1 white-text center-align">
+          <h4>{{ getTitle() }}</h4>
 
-        <div class="card red darken-4 center-align white-text result-box">
-          <p>Der Test war zu </p>
-          <h1 class="result-number">{{ correctPercentage }}</h1>
-          <p>Prozent richtig.</p>
+          <div class="card red darken-4 center-align white-text result-box">
+            <p>Der Test war zu </p>
+            <h1 class="result-number">{{ correctPercentage }}</h1>
+            <p>Prozent richtig.</p>
+          </div>
+
+          <p class="result-message">{{ getMessage() }}</p>
+
+          <button class="btn waves-effect waves-light white black-text" (click)="showResults()">Neustart</button>
         </div>
-
-        <p class="result-message">{{ getMessage() }}</p>
-
-        <button class="btn waves-effect waves-light white black-text" (click)="showResults()">Neustart</button>
       </div>
     </div>
   </div>
-</div>
+</main>

@@ -17,13 +17,16 @@ export class SelfcheckComponent {
   correctPercentage: number = 0;
   currentQuestionIndex: number = 0;
   questions = selfcheckQuestions
-  totalWeight = 0;
+  totalWeight: number = 0;
 
   onAnswerSelected(question: string, answer: string) {
-    //this.totalWeight += this.questions[this.currentQuestionIndex]
-    console.log(question)
+    this.questions[this.currentQuestionIndex].answers.forEach( element => {
+      if(element.answer == answer) {
+        this.totalWeight += element.weight;
+      }
+    });
+    console.log(this.totalWeight)
     this.nextQuestion();
-    console.log("dad");
   }
 
   nextQuestion() {
