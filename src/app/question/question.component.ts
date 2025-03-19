@@ -25,10 +25,20 @@ export class QuestionComponent {
   isCorrect: boolean = false;
   radioDisabled: boolean = false;
 
-  selectAnswer(answer: string, event: Event) {
-    event.stopPropagation(); // Prevent bubbling issues
+  submitAnswer(answer: string, event: Event) {
+    if(!this.radioDisabled) {
+      this.showAnswerFeedback();
+    }
+    else {
+      this.radioDisabled = false
+      this.showFeedback = false
+      this.answerSelected.emit(answer);
+    }
+    event.stopPropagation();
+  }
+
+  selectAnswer(answer: string) {
     this.selectedAnswer = answer;
-    this.answerSelected.emit(answer);
   }
 
   getAnswerClass(answer: string): string {

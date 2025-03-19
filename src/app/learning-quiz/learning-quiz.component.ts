@@ -39,5 +39,6 @@ export class LearningQuizComponent {
   onAnswerSelected(question: string, answer: string) {
     // Handle any additional logic when an answer is selected
     console.log("test")
+    this.currentQuestionIndex++
   }
 }

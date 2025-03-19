@@ -1,17 +1,18 @@
 <ul class="collection">
+  <p style="margin-left: 3%;">{{ question }}</p>
   <li *ngFor="let answer of answers" class="collection-item">
     <label>
       <input class="with-gap red darken-4"
         type="radio"
         [name]="question"
-        (click)="selectAnswer(answer.text, $event)"
         [disabled]="radioDisabled"
+        (click)="selectAnswer(answer.text)"
       />
       <span [ngClass]="getAnswerClass(answer.text)">{{ answer.text }}</span>
     </label>
   </li>
 </ul>
-<button *ngIf="!isSelfCheck" class="btn red darken-4" (click)="showAnswerFeedback()">Okay</button>
+<button *ngIf="!isSelfCheck" class="btn red darken-4" (click)="submitAnswer('answer.text', $event)">Okay</button>
 <div *ngIf="showFeedback">
   <p [ngClass]="{'correct-answer': isCorrect, 'wrong-answer': !isCorrect}">
     {{ isCorrect ? 'Correct!' : 'Incorrect!' }}

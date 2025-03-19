@@ -6,7 +6,7 @@
       <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
         <app-question
           class="card"
-          [question]="currentQuestion.question"
+          [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
           [answers]="currentQuestion.answers"
           [correctAnswer]="currentQuestion.correctAnswer"
           [feedback]="currentQuestion.feedback"

@@ -7,13 +7,3 @@
   background-color: rgba(255, 99, 71, 0.5);
   font-weight: bold;
 }
-
-[type="radio"]:checked + span:after,
-[type="radio"].with-gap:checked + span:before,
-[type="radio"].with-gap:checked + span:after {
-  border: 2px solid #b71c1c;
-}
-[type="radio"]:checked + span:after,
-[type="radio"].with-gap:checked + span:after {
-  background-color: #b71c1c;
-}
