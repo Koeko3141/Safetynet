@@ -23,8 +23,8 @@
 }
 
 .choice.selected {
-  background-color: #c8e6c9;
-  border-color: #2e7d32;
+  background-color: #e6c8c8;
+  border-color: #7d2e43;
 }
 
 .choice input {
@@ -39,7 +39,7 @@
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 18px;
-  background-color: teal;
+  background-color: #800013;
   color: white;
   border: none;
   cursor: pointer;
@@ -52,7 +52,7 @@
 }
 
 .confirm-btn:hover:not(:disabled), .restart-btn:hover {
-  background-color: #00695c;
+  background-color: #690000;
 }
 
 .radicalization-scale {

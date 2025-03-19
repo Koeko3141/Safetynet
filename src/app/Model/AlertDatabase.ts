@@ -37,7 +37,7 @@ export let alerts = [
   },
   {
     subject: "",
-    name: "Elisabet",
+    name: "Elisabeth",
     description: "Went hiking",
     priority: 0.03
   },
