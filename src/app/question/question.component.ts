@@ -37,8 +37,12 @@ export class QuestionComponent {
     event.stopPropagation();
   }
 
+  @Output() selectedAnswerChange = new EventEmitter<string>();
+
   selectAnswer(answer: string) {
     this.selectedAnswer = answer;
+    this.selectedAnswerChange.emit(this.selectedAnswer);
+    console.log(this.selectedAnswer);
   }
 
   getAnswerClass(answer: string): string {
