@@ -16,7 +16,7 @@
 <button class="btn red darken-4" (click)="learnSubmitAnswer('answer.text', $event)" [disabled]="selectedAnswer === null">Bestätigen</button>
 <div *ngIf="showFeedback">
   <p [ngClass]="{'correct-answer': isCorrect, 'wrong-answer': !isCorrect}">
-    {{ isCorrect ? 'Correct!' : 'Incorrect!' }}
+    {{ isCorrect ? 'Gute Entscheidung' : 'Das geht auch anders' }}
   </p>
   <p>{{ feedback }}</p>
 </div>
