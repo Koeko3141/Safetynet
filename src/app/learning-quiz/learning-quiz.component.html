@@ -15,12 +15,14 @@
       <div class="card-panel white z-depth-0 custom-box">
         <div class="row">
           <div class="col s12">
-            <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
-              <app-question class="card" [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
-                [answers]="currentQuestion.answers" [correctAnswer]="currentQuestion.correctAnswer"
-                [feedback]="currentQuestion.feedback" (selectedAnswerChange)="onSelectedAnswerChange($event)"
-                (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
-              </app-question>
+            <ng-container *ngIf="!showFeedback">
+              <ng-container *ngIf="questions[currentQuestionIndex] as currentQuestion">
+                <app-question class="card" [question]="(currentQuestionIndex + 1) + '. ' + currentQuestion.question"
+                  [answers]="currentQuestion.answers" [correctAnswer]="currentQuestion.correctAnswer"
+                  [feedback]="currentQuestion.feedback" (selectedAnswerChange)="onSelectedAnswerChange($event)"
+                  (answerSelected)="onAnswerSelected(currentQuestion.question, $event)">
+                </app-question>
+              </ng-container>
             </ng-container>
           </div>
         </div>
