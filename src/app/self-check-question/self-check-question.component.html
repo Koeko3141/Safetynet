@@ -11,4 +11,4 @@
       </label>
     </li>
   </ul>
-  <button class="btn red darken-4" (click)="selfSubmitAnswer(selectedAnswer, $event)">Bestätigen</button>
+  <button class="btn red darken-4" (click)="selfSubmitAnswer(selectedAnswer, $event)" [disabled]="selectedAnswer === null">Bestätigen</button>

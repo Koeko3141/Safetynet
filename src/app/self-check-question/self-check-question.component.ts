@@ -21,6 +21,7 @@ export class SelfCheckQuestionComponent {
     this.selectedAnswer = answer;
 
     this.answerSelected.emit(answer ?? undefined);
+    this.selectedAnswer = null;
     event.stopPropagation();
   }
 

@@ -33,6 +33,7 @@ export class QuestionComponent {
       this.radioDisabled = false
       this.showFeedback = false
       this.answerSelected.emit(answer);
+      this.selectedAnswer = null;
     }
     event.stopPropagation();
   }

@@ -13,7 +13,7 @@
     </label>
   </li>
 </ul>
-<button class="btn red darken-4" (click)="learnSubmitAnswer('answer.text', $event)">Bestätigen</button>
+<button class="btn red darken-4" (click)="learnSubmitAnswer('answer.text', $event)" [disabled]="selectedAnswer === null">Bestätigen</button>
 <div *ngIf="showFeedback">
   <p [ngClass]="{'correct-answer': isCorrect, 'wrong-answer': !isCorrect}">
     {{ isCorrect ? 'Correct!' : 'Incorrect!' }}
