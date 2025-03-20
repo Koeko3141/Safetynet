@@ -1,6 +1,6 @@
 export let selfcheckQuestions=[
     {
-        question:"Wie oft äußert die Person in Ihrem Umfeld radikale politische oder religiöse Ansichten?",
+        question:"Wie oft äußert die Person radikale Ansichten?",
         answers:[
             {
                 answer:"Sehr oft",
@@ -17,7 +17,7 @@ export let selfcheckQuestions=[
         ],
     },
     {
-        question:"Hat die Person in letzter Zeit eine starke Abneigung gegenüber bestimmten Gruppen oder Gesellschaften entwickelt (z. B. Migranten, bestimmte Religionen)? you shown disdain towards certain groups of people recently?",
+        question:"Hat die Person in letzter Zeit eine starke Abneigung gegenüber bestimmten Gruppen oder Gesellschaften entwickelt (z. B. Migranten, bestimmte Religionen)?",
         answers:[
             {
                 answer:"Ja, sehr stark",
@@ -51,10 +51,10 @@ export let selfcheckQuestions=[
             ],
     },
     {
-        question:"Wie steht die Person zu Konflikten? Bevorzugt sie es, Konflikte mit anderen zu konfrontieren, oder zieht sie sich zurück?",
+        question:"Wie steht die Person zu Konflikten? Geht sie aktiv auf Konflikte zu oder zieht sie sich eher zurück?",
         answers:[
             {
-                answer:"Ja, es gab eine deutliche Veränderung",
+                answer:"Ja, sie gerät zunehmend in Konflikte und tritt konfrontativer auf",
                 weight:1
             },
             {
@@ -68,7 +68,7 @@ export let selfcheckQuestions=[
         ],
     },
     {
-        question:"Hat die Person schon mal solche Aktivitäten durchgeführt oder andere dazu angestiftet?",
+        question:"Hat die Person schon mal an radikalen Aktivitäten teilgenommen?",
         answers:[
             {
                 answer:"Oft",
