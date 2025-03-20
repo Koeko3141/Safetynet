@@ -29,18 +29,18 @@
 
         <div *ngIf="showFeedback" class="row">
           <div class="col s12 m8 offset-m2">
-            <div class="card-panel grey darken-1 white-text center-align">
-              <h4>{{ getTitle() }}</h4>
+            <div class="center-align">
+              <h2>{{ getTitle() }}</h2>
 
-              <div class="card red darken-4 center-align white-text result-box">
+              <div class="card grey lighten-2 center-align black-text result-box" style="padding: 3px 0;">
                 <p>Das Risiko einer Radikalisierung liegt bei </p>
-                <h1 class="result-number white-text">{{ correctPercentage }}</h1>
+                <h1 class="result-number" style="margin-bottom: 10px !important;">{{ correctPercentage }}</h1>
                 <p>Prozent.</p>
               </div>
 
               <p class="result-message">{{ getMessage() }}</p>
 
-              <button class="btn waves-effect waves-light white black-text" (click)="showResults()">Neustart</button>
+              <button class="btn red darken-4" (click)="showResults()">Neustart</button>
             </div>
           </div>
         </div>
