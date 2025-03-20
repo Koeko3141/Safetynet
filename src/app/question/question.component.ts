@@ -16,7 +16,7 @@ export class QuestionComponent {
   @Input() question: string = "";
   @Input() answers: { text: string, feedback: string }[] = [];
   @Input() correctAnswer: string = "";
-  @Input() feedback: string = "";;
+  @Input() feedback: string = "";
   @Output() answerSelected = new EventEmitter<string>();
   @Output() nextQuestion = new EventEmitter<void>();
 
@@ -37,8 +37,12 @@ export class QuestionComponent {
     event.stopPropagation();
   }
 
+  @Output() selectedAnswerChange = new EventEmitter<string>();
+
   selectAnswer(answer: string) {
     this.selectedAnswer = answer;
+    this.selectedAnswerChange.emit(this.selectedAnswer);
+    console.log(this.selectedAnswer);
   }
 
   getAnswerClass(answer: string): string {

@@ -15,10 +15,18 @@ export class LearningQuizComponent {
   correctCounter: number = 0;
   showFeedback: boolean = false;
   questions = questionList;
+  currentSelectedAnswer: string = '';
 
-  onAnswerSelected(question: string, answer: string) {
+  onSelectedAnswerChange(answerText: string) {
+    console.log('Parent hat empfangen:', answerText);
+    this.currentSelectedAnswer = answerText;
+  }
+
+  onAnswerSelected(question: string, answer: any) {
     const currentQuestion = this.questions[this.currentQuestionIndex];
-    if (answer === currentQuestion.correctAnswer) {
+    const answerText = this.currentSelectedAnswer;
+    console.log(answerText);
+    if (answerText === currentQuestion.correctAnswer) {
       this.correctCounter++;
     }
     this.nextQuestion();
