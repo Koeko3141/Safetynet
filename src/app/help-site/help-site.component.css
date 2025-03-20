@@ -17,6 +17,7 @@ textarea {
 h2 {
     font-size: 1.3rem;
     color: #b71c1c;
+    margin-top: 1rem;
 }
 
 .form-div {
@@ -64,4 +65,14 @@ input:focus, textarea:focus {
 input.valid, input.invalid, textarea.valid, textarea.invalid {
     border: 2px solid black !important;
     box-shadow: none !important;
+}
+
+@media (max-width: 1000px) {
+    label {
+        font-size: 14px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Eine Spalte für Mobile */
+    }
 }
