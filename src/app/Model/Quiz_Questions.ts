@@ -1,9 +1,9 @@
 export let questionList=[
     {
-        question:"Wie reagierst du, wenn jemand eine andere politische Meinung äußert, die du nicht teilst?",
+        question:"Wie reagierst du, wenn jemand eine politische Meinung äußert, die du nicht teilst?",
         answers:[
             {
-                text:"Ich höre zu und versuche, die Perspektive zu verstehen.",
+                text:"Ich höre zu und versuche seine Perspektive zu verstehen.",
                 feedback:"Das ist super! Offenheit für andere Meinungen zeigt Reife und stärkt den Dialog."
             },
             {
@@ -11,18 +11,18 @@ export let questionList=[
                 feedback:"Das kann kurzfristig Stress vermeiden, aber manchmal lohnt sich eine sachliche Diskussion."
             },
             {
-                text:"Ich beginne sofort, die Person zu kritisieren oder anzugreifen.",
+                text:"Ich beginne sofort die Person zu kritisieren oder anzugreifen.",
                 feedback:"Vorsicht! Das führt oft nur zu Streit, statt zu einem echten Austausch."
             },
         ],
-        correctAnswer:"Ich höre zu und versuche, die Perspektive zu verstehen.",
+        correctAnswer:"Ich höre zu und versuche seine Perspektive zu verstehen.",
         feedback:""
     },
     {
         question:"Wenn du von einer Nachricht hörst, die eine Gruppe betrifft, die du nicht magst, wie fühlst du dich?",
         answers:[
             {
-                text:"Ich versuche, beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
+                text:"Ich versuche beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
                 feedback:"Sehr gute Herangehensweise! So kannst du voreilige Urteile vermeiden."
             },
             {
@@ -34,7 +34,7 @@ export let questionList=[
                 feedback:"Das ist riskant, weil es eher zu Spaltung als zu Lösungen führt"
             },
         ],
-        correctAnswer:"Ich versuche, beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
+        correctAnswer:"Ich versuche beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
         feedback:""
     },
     {
@@ -45,11 +45,11 @@ export let questionList=[
                 feedback:"Klasse! Respektvolle Gespräche sind der Schlüssel zu echtem Verständnis."
             },
             {
-                text:"Ich versuche, meinen Standpunkt zu verteidigen, ohne auf den anderen einzugehen.",
-                feedback:"Pass auf, dass du nicht nur deine Meinung durchdrücken willst"
+                text:"Ich versuche meinen Standpunkt zu verteidigen, ohne auf den anderen einzugehen.",
+                feedback:"Pass auf das du nicht nur deine Meinung durchdrücken willst"
             },
             {
-                text:"Ich werde aggressiv und versuche, den anderen zu überzeugen, dass er falsch ist.",
+                text:"Ich werde aggressiv und versuche den anderen zu überzeugen, dass er falsch liegt.",
                 feedback:"Das wird eher abschreckend wirken. Ruhige Argumente sind oft überzeugender."
             },
         ],
@@ -69,18 +69,18 @@ export let questionList=[
             },
             {
                 text:"Ich stimme zu oder verteidige die extremen Ansichten, um meinen Standpunkt zu beweisen.",
-                feedback:"Vorsicht, das kann gefährlich sein! Besser ist es, kritisch zu hinterfragen."
+                feedback:"Vorsicht, das kann gefährlich sein! Besser ist es kritisch zu hinterfragen."
             },
         ],
         correctAnswer:"Ich versuche, ruhig und respektvoll mit der Person zu sprechen und zu verstehen, warum sie diese Ansichten hat.",
         feedback:""
     },
     {
-        question:"Wie würdest du reagieren, wenn du in einer Gruppe von Menschen bist, die Hassreden oder diskriminierende Kommentare äußern?",
+        question:"Wie würdest du reagieren wenn du in einer Gruppe von Menschen bist, die Hassreden oder diskriminierende Kommentare äußern?",
         answers:[
             {
                 text:"Ich spreche mich gegen die Aussagen aus und fordere respektvolle Kommunikation.",
-                feedback:"Sehr gut! Es braucht oft Mut, sich klar gegen Hass oder Diskriminierung zu stellen."
+                feedback:"Sehr gut! Es braucht oft Mut um sich klar gegen Hass oder Diskriminierung zu stellen."
             },
             {
                 text:"Ich bleibe still und vermeide Konflikte.",
@@ -88,7 +88,7 @@ export let questionList=[
             },
             {
                 text:"Ich stimme den Kommentaren zu oder mache keine Einwände.",
-                feedback:"Bedenklich, weil Schweigen oft als Zustimmung gewertet wird."
+                feedback:"Bedenklich da Schweigen oft als Zustimmung gewertet wird."
             },
         ],
         correctAnswer:"Ich spreche mich gegen die Aussagen aus und fordere respektvolle Kommunikation.",
@@ -99,15 +99,15 @@ export let questionList=[
         answers:[
             {
                 text:"Ich würde mich an die Polizei wenden und Ihnen genau den Vorfall schildern.",
-                feedback:"Sehr verantwortungsbewusst! Sicherheit geht immer vor."
+                feedback:"Sehr Verantwortungsbewusst! Sicherheit geht immer vor."
             },
             {
                 text:"Ich beobachte die Aktivitäten, aber ich unternehme nichts.",
-                feedback:"Passiv zu bleiben kann riskant sein, vor allem wenn eine solch Radikalisierte Person durch dreht."
+                feedback:"Passiv zu bleiben kann riskant sein, vor allem wenn eine solch radikalisierte Person durchdreht."
             },
             {
                 text:"Ich gehe zur Person und unterstütze sie dabei und mache wenn möglich mit.",
-                feedback:"Gefährlich! Das kann ernste Konsequenzen haben, sei vorsichtig, mit wem du dich einlässt."
+                feedback:"Gefährlich! Das kann ernste Konsequenzen haben, sei vorsichtig mit wem du dich einlässt."
             },
         ],
         correctAnswer:"Ich würde mich an die Polizei wenden und Ihnen genau den Vorfall schildern.",
