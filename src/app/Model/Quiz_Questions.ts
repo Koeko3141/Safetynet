@@ -19,18 +19,18 @@ export let questionList=[
         feedback:""
     },
     {
-        question:"Wenn du von einer Nachricht hörst, die eine Gruppe betrifft, die du nicht magst, wie fühlst du dich?",
+        question:"Du hörst eine Nachricht, der du kritisch gegenüber stehst, von einer Gruppe, die du nicht magst. Wie reagierst du?",
         answers:[
             {
-                text:"Ich versuche beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
-                feedback:"Sehr gute Herangehensweise! So kannst du voreilige Urteile vermeiden."
+                text:"Ich versuche die Nachricht unvoreingenommen zu prüfen und beide Seiten der Geschichte zu verstehen, bevor ich mir eine Meinung bilde.",
+                feedback:"Eine sehr reflektierte Herangehensweise! So kannst du voreilige Urteile vermeiden."
             },
             {
-                text:"Ich fühle mich wütend und möchte diese Gruppe meiden.",
+                text:"Ich werde wütend und möchte diese Gruppe meiden.",
                 feedback:"Verständlich, aber vielleicht lohnt sich eine genauere Betrachtung der Situation."
             },
             {
-                text:"Ich bin froh, dass diese Gruppe in Schwierigkeiten ist und teile diese Meinung mit anderen.",
+                text:"Ich freue mich, dass diese Gruppe in Schwierigkeiten ist und teile diese Meinung mit anderen.",
                 feedback:"Das ist riskant, weil es eher zu Spaltung als zu Lösungen führt"
             },
         ],
@@ -46,10 +46,10 @@ export let questionList=[
             },
             {
                 text:"Ich versuche meinen Standpunkt zu verteidigen, ohne auf den anderen einzugehen.",
-                feedback:"Pass auf das du nicht nur deine Meinung durchdrücken willst"
+                feedback:"Pass auf das du nicht nur deine Meinung durchsetzen möchtest."
             },
             {
-                text:"Ich werde aggressiv und versuche den anderen zu überzeugen, dass er falsch liegt.",
+                text:"Ich werde aggressiv und versuche die andere Person zu überzeugen, dass sie falsch liegt.",
                 feedback:"Das wird eher abschreckend wirken. Ruhige Argumente sind oft überzeugender."
             },
         ],
@@ -68,7 +68,7 @@ export let questionList=[
                 feedback:"In manchen Fällen ist das okay, aber du verpasst vielleicht eine Chance auf einen sinnvollen Austausch."
             },
             {
-                text:"Ich stimme zu oder verteidige die extremen Ansichten, um meinen Standpunkt zu beweisen.",
+                text:"Ich stimme zu oder verteidige die extremen Ansichten, da sie für mich sinnvoll klingen.",
                 feedback:"Vorsicht, das kann gefährlich sein! Besser ist es kritisch zu hinterfragen."
             },
         ],
@@ -76,11 +76,11 @@ export let questionList=[
         feedback:""
     },
     {
-        question:"Wie würdest du reagieren wenn du in einer Gruppe von Menschen bist, die Hassreden oder diskriminierende Kommentare äußern?",
+        question:"Wie würdest du reagieren, wenn du in einer Gruppe von Menschen bist, die Hassreden halten oder diskriminierende Kommentare äußern?",
         answers:[
             {
                 text:"Ich spreche mich gegen die Aussagen aus und fordere respektvolle Kommunikation.",
-                feedback:"Sehr gut! Es braucht oft Mut um sich klar gegen Hass oder Diskriminierung zu stellen."
+                feedback:"Sehr gut! Es braucht oft Mut, um sich klar gegen Hass oder Diskriminierung zu stellen."
             },
             {
                 text:"Ich bleibe still und vermeide Konflikte.",
@@ -95,19 +95,19 @@ export let questionList=[
         feedback:""
     },
     {
-        question:"Wie würdest du reagieren, wenn du in einem Klub feiern bist und eine Person öfters Radikalisierte Sachen durchführt?",
+        question:"Wie würdest du reagieren, wenn du in einem Klub feiern gehst und dort eine Person radikalisierte oder extremistische Aktionen ausführt?",
         answers:[
             {
-                text:"Ich würde mich an die Polizei wenden und Ihnen genau den Vorfall schildern.",
-                feedback:"Sehr Verantwortungsbewusst! Sicherheit geht immer vor."
+                text:"Ich wende mich an die Polizei und schildere Ihnen den Vorfall.",
+                feedback:"Sehr verantwortungsbewusst! Sicherheit geht immer vor."
             },
             {
-                text:"Ich beobachte die Aktivitäten, aber ich unternehme nichts.",
-                feedback:"Passiv zu bleiben kann riskant sein, vor allem wenn eine solch radikalisierte Person durchdreht."
+                text:"Ich beobachte die Aktivitäten, unternehme aber nichts.",
+                feedback:"Untätig zu bleiben kann riskant sein, besonders wenn eine radikalisierte Person die Kontrolle verliert."
             },
             {
-                text:"Ich gehe zur Person und unterstütze sie dabei und mache wenn möglich mit.",
-                feedback:"Gefährlich! Das kann ernste Konsequenzen haben, sei vorsichtig mit wem du dich einlässt."
+                text:"Ich gehe zur Person und unterstütze sie bei ihren Aktionen.",
+                feedback:"Gefährlich! Das kann ernste Konsequenzen haben. Sei vorsichtig, mit wem du dich einlässt."
             },
         ],
         correctAnswer:"Ich würde mich an die Polizei wenden und Ihnen genau den Vorfall schildern.",
