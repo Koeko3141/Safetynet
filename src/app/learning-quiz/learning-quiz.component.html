@@ -27,9 +27,9 @@
 
         <div *ngIf="showFeedback" class="row">
           <div class="col s12 m8 offset-m2">
-            <div class="card-panel grey darken-1 white-text center-align">
-              <h4>{{ getMessage() }}</h4>
-              <button class="btn waves-effect waves-light white black-text" (click)="restartQuiz()">Neustart</button>
+            <div class="card-panel grey lighten-2 black-text center-align">
+              <p>{{ getMessage() }}</p>
+              <button class="btn red darken-4" (click)="restartQuiz()">Neustart</button>
             </div>
           </div>
         </div>
