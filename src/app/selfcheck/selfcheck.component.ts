@@ -3,11 +3,12 @@ import { QuestionComponent } from '../question/question.component';
 import {NgForOf, NgIf} from '@angular/common';
 import { SelfCheckQuestionComponent } from "../self-check-question/self-check-question.component";
 import { selfcheckQuestions } from '../Model/SelfCheck_Questions';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-selfcheck',
   standalone: true,
-  imports: [NgIf, SelfCheckQuestionComponent],
+  imports: [NgIf, SelfCheckQuestionComponent, RouterLink],
   templateUrl: './selfcheck.component.html',
   styleUrls: ['./selfcheck.component.css']
 })
