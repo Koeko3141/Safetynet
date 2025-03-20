@@ -2,7 +2,7 @@
   {
     "pageNumber": 0,
     "title": "Der Anfang",
-    "content": "Du siehst auf Social Media ein Kurzvideo wie eine ältere Dame von einem Migranten bedroht wird. Wie verhältst du dich",
+    "content": "Du siehst auf Social Media ein Kurzvideo wie eine ältere Dame von einem Migranten bedroht wird. Wie verhältst du dich?",
     "choices": [
       { "text": "Liken", "targetPageNumber": 1, "points": 2},
       { "text": "Weiterscrollen", "targetPageNumber": 2, "points": 0 },
@@ -11,19 +11,19 @@
   },
   {
     "pageNumber": 1,
-    "title": "Du hast Like dagelassen",
-    "content": "Du scrollst weiter, und bekommst von der Platform mehr Videos zu dieser Thematik und Parteien welche diese Probleme ansprechen, vorgeschlagen.",
+    "title": "Du hast den Beitrag gelikt.",
+    "content": "Du scrollst weiter und bekommst von der Platform mehr Videos zu dieser Thematik und Parteien, welche damit zusammenhängende Probleme ansprechen, vorgeschlagen.",
     "choices": [
-      { "text": "Du likest die meisten davon", "targetPageNumber": 4,
+      { "text": "Du likst die meisten davon.", "targetPageNumber": 4,
         "points": 2
       },
-      { "text": "Du bemerkst den Blödsinn dahinter und drückst auf 'nicht interessiert'", "targetPageNumber": -1, "points": -2 }
+      { "text": "Du erkennst die problematischen Inhalte und drückst auf 'nicht interessiert'.", "targetPageNumber": -1, "points": -2 }
     ]
   },
   {
     "pageNumber": 2,
     "title": "Du scrollst weiter",
-    "content": "Du hast das Video ignoriert, machst dir aber noch ein paar Gedanken dazu, ob du etwas hättest tun sollen.",
+    "content": "Du hast das Video ignoriert, machst dir aber noch ein paar Gedanken, ob du anders reagieren hättest sollen.",
     "choices": [
       { "text": "Nochmal zurück scrollen", "targetPageNumber": 0, "points": 0 },
       { "text": "Einfach weiter scrollen", "targetPageNumber": -1, "points": 0 }
@@ -32,91 +32,91 @@
   {
     "pageNumber": 3,
     "title": "Du öffnest die Kommentare",
-    "content": "Du liest ein paar Kommentare, viele unterstützen die Dame und sind gegen Migranten. Du willst auch deine eigene Meinung dazu abgeben.",
+    "content": "Du liest ein paar Kommentare: viele unterstützen die Dame und sind gegen Migrant*innen. Du willst auch deine eigene Meinung dazu abgeben.",
     "choices": [
-      { "text": "'Stolz auf unser Heimatland, es sollte wieder so sein wie damals'", "targetPageNumber": 14, "points": 4 },
-      { "text": "Du liest noch ein paar weitere", "targetPageNumber": 15, "points": 2 },
-      { "text": "'Traurig wer dahinter steht 🤦‍♂️'", "targetPageNumber": 16, "points": -3 }
+      { "text": "Stolz auf unser Heimatland – es soll wieder so sein 'wie damals'.'", "targetPageNumber": 14, "points": 4 },
+      { "text": "Du liest noch ein paar weitere Kommentare.", "targetPageNumber": 15, "points": 2 },
+      { "text": "'Es ist traurig, dass solche Ansichten immer noch verbreitet werden. 🤦‍♂️'", "targetPageNumber": 16, "points": -3 }
     ]
   },
   {
     "pageNumber": 4,
-    "title": "Dir gefallen die Ideen und Werte hinter den Videos",
-    "content": "Am nächsten Tag, sprichst du in der Schule oder am Arbeitsplatz mit Kollegen, welche ähnliche Ansichten haben. Ihr beschließt, euch zu einer Demonstration zu treffen.",
+    "title": "Dir gefallen die Ideen und Werte hinter den Videos.",
+    "content": "Am nächsten Tag sprichst du in der Schule oder am Arbeitsplatz mit Kollegen, welche ähnliche Ansichten haben. Ihr beschließt an einer Demonstration teilzunehmen.",
     "choices": [
-      { "text": "Mitgehen?", "targetPageNumber": 6, "points": 2 },
-      { "text": "Erstmal ablehnen", "targetPageNumber": 7, "points": 0 }
+      { "text": "Gehst du mit?", "targetPageNumber": 6, "points": 2 },
+      { "text": "Du lehnst erstmal ab.", "targetPageNumber": 7, "points": 0 }
     ]
   },
   {
     "pageNumber": 6,
-    "title": "Du kommst nach Hause, deine Eltern fragen nach deinem Tag",
-    "content": "Du erzählst ihnen von der Demonstration und sie sind entsetzt. Sie erklären dir, dass die Partei, die die Demonstration organisiert hat, rechtsextremistisch ist und du dich von solchen Gruppen fernhalten solltest.",
+    "title": "Du kommst nach Hause, deine Eltern fragen nach deinem Tag.",
+    "content": "Du erzählst ihnen von der Demonstration und sie sind entsetzt. Sie erklären dir, dass die Partei, die die Demonstration organisiert hat, rechtsextremistisch sei und du dich von solchen Gruppen fernhalten solltest.",
     "choices": [
-      { "text": "Ignorieren und trotzdem hingehen", "targetPageNumber": 8, "points": 2 },
-      { "text": "Auf die Eltern hören und nochmal drüber nachdenken", "targetPageNumber": 9, "points": 0 }
+      { "text": "Deine Eltern ignorieren und trotzdem hingehen.", "targetPageNumber": 8, "points": 2 },
+      { "text": "Auf deine Eltern hören und nochmal darüber nachdenken.", "targetPageNumber": 9, "points": 0 }
     ]
   },
   {
     "pageNumber": 7,
-    "title": "Du bekommst ein Video auf Social Media von der Demo, und siehst die gewallt bereiten Aktionen",
-    "content": "Du bist unsicher, ob du noch mit der Gruppe gehen sollst oder nicht.",
+    "title": "Du bekommst ein Video auf Social Media von der Demo und siehst gewaltbereite Aktionen.",
+    "content": "Du bist unsicher, ob du noch mit der Gruppe mitgehen sollst oder nicht.",
     "choices": [
-      { "text": "Du gehst einfach bei der nächsten mit", "targetPageNumber": 8, "points": 2 },
-      { "text": "Du hältst dich von der Gruppe fern und versuchst diese Ideen zu vergessen", "targetPageNumber": -1, "points": -2 }
+      { "text": "Du gehst einfach bei der nächsten Demonstration mit.", "targetPageNumber": 8, "points": 2 },
+      { "text": "Du hältst dich von der Gruppe fern und versuchst diese Ideen zu vergessen.", "targetPageNumber": -1, "points": -2 }
     ]
   },
   {
     "pageNumber": 8,
     "title": "Tag der Demonstration",
-    "content": "Du lernst neue Leute kennen und fühlst dich wohl. Die Demonstration verläuft soweit friedlich und du bist stolz, ein Teil davon zu sein. Du siehst jedoch Leute, welche deine Meinung nicht teilen, und wie deine Gruppe auf sie zu geht.",
+    "content": "Du lernst neue Leute kennen und fühlst dich wohl. Die Demonstration verläuft soweit friedlich und du bist stolz, ein Teil davon zu sein. Du siehst jedoch Leute, die deine Meinung nicht teilen, und deine Gruppe bewegt sich auf sie zu...",
     "choices": [
-      { "text": "Mitgehen und deine Gruppe unterstützen", "targetPageNumber": 10, "points": 2 },
-      { "text": "Erstmal auf Abstand bleiben und von der Ferne beobachten", "targetPageNumber": 11, "points": 0 }
+      { "text": "Mitgehen und deine Gruppe unterstützen.", "targetPageNumber": 10, "points": 2 },
+      { "text": "Erstmal auf Abstand bleiben und aus der Ferne beobachten.", "targetPageNumber": 11, "points": 0 }
     ]
   },
   {
     "pageNumber": 9,
-    "title": "Du überlegst dir die Meinung deiner Eltern",
+    "title": "Du überlegst dir die Meinung deiner Eltern.",
     "content": "Du liest mehr über die Partei und die Demonstration und findest heraus, dass sie rechtsextremistisch ist. Du bist unsicher, ob du dich weiterhin mit solchen Gruppen abgeben solltest.",
     "choices": [
-      { "text": "Du gehst trotzdem hin", "targetPageNumber": 8, "points": 1 },
-      { "text": "Du entscheidest dich, dich von solchen Gruppen fernzuhalten", "targetPageNumber": -1, "points": -1 }
+      { "text": "Du gehst trotzdem hin.", "targetPageNumber": 8, "points": 1 },
+      { "text": "Du entscheidest dich solchen Gruppen fernzubleiben.", "targetPageNumber": -1, "points": -1 }
     ]
   },
   {
     "pageNumber": 10,
-    "title": "Du stehst mit deiner Gruppe vor Migranten",
-    "content": "Die Situation eskaliert und du siehst, wie deine Gruppe auf die Migranten losgeht. Du bist unsicher, ob du eingreifen sollst oder nicht.",
+    "title": "Du stehst mit deiner Gruppe vor Migrant*innen.",
+    "content": "Die Situation eskaliert und du siehst, wie deine Gruppe auf die Migrant*innen losgeht. Du bist unsicher, ob du eingreifen sollst oder nicht.",
     "choices": [
-      { "text": "Du unterstützt gewallt bereit deine Gruppe", "targetPageNumber": 12, "points": 4 },
-      { "text": "Du schreckst zurück, und verlässt sofort die Demonstration", "targetPageNumber": 13, "points": -3 }
+      { "text": "Du unterstützt gewaltbereit deine Gruppe.", "targetPageNumber": 12, "points": 4 },
+      { "text": "Du schreckst zurück und verlässt sofort die Demonstration.", "targetPageNumber": 13, "points": -3 }
     ]
   },
   {
     "pageNumber": 11,
-    "title": "Du siehst der Gruppe zu, wie sie die Migranten angreifen",
+    "title": "Du siehst der Gruppe zu, wie sie die Migrant*innen angreifen",
     "content": "Du beobachtest die Situation und siehst, wie die Polizei eingreift und die Demonstration auflöst",
     "choices": [
-      { "text": "Du gehst nach Hause und probierst dies alles zu vergessen", "targetPageNumber": -1, "points": -2 },
-      { "text": "Du bist entsetzt, dass die Polizei den Migranten geholfen hatte.", "targetPageNumber": 13, "points": 3 }
+      { "text": "Du gehst nach Hause und probierst das Erlebnis zu vergessen.", "targetPageNumber": -1, "points": -2 },
+      { "text": "Du bist entsetzt, dass die Polizei den Migrant*innen geholfen hat.", "targetPageNumber": 13, "points": 3 }
     ]
   },
   {
     "pageNumber": 12,
     "title": "Die Polizei greift ein und die Demonstration wird aufgelöst",
-    "content": "Du gehst nach Hause, und die Demonstration hat dich überzeugt und triffst dich mehr mit der Gruppe. Ihr plant weitere Aktionen. Dir droht aber wegen dieser Aktion eine Anzeige.",
+    "content": "Du gehst nach Hause. Die Demonstration hat dich überzeugt und du triffst dich mehr mit der Gruppe. Ihr plant weitere Aktionen. Dir droht aber wegen dieser Aktion eine Anzeige.",
     "choices": [
-      { "text": "Willst du sehen, wie sehr du radikalisiert geworden bist?", "targetPageNumber": -1, "points": 0 }
+      { "text": "Willst du sehen, wie stark du radikalisiert wurdest?", "targetPageNumber": -1, "points": 0 }
     ]
   },
   {
     "pageNumber": 13,
-    "title": "In den kommenden Wochen beschäftigst du dich mehr mit der Thematik",
-    "content": "Du siehst mehr Videos und liest mehr Artikel, welche deine Meinung bestätigen. Du fühlst dich in deiner Meinung bestätigt und bist überzeugt, dass du das Richtige tust.",
+    "title": "In den kommenden Wochen beschäftigst du dich mehr mit der Thematik.",
+    "content": "Du siehst weitere Videos und liest mehrere Artikel, welche deine Meinung bestätigen. Du fühlst dich in deinen Ansichten bestätigt und bist überzeugt, dass du das Richtige tust.",
     "choices": [
-      { "text": "Du suchst nach Gruppen, die ähnlich denken", "targetPageNumber": 35, "points": 2 },
-      { "text": "Du beginnst, den Medien zu misstrauen und suchst alternative Quellen", "targetPageNumber": 36, "points": 1 }
+      { "text": "Du suchst nach Gruppen, die ähnlich denken.", "targetPageNumber": 35, "points": 2 },
+      { "text": "Du beginnst, den Medien zu misstrauen und suchst alternative Quellen.", "targetPageNumber": 36, "points": 1 }
     ]
   },
   {
@@ -124,34 +124,34 @@
     "title": "Du hast deinen Kommentar abgegeben",
     "content": "Du bekommst viele Likes und Kommentare, welche deine Meinung unterstützen. Du fühlst dich bestätigt und siehst, dass viele deiner Freunde auch so denken.",
     "choices": [
-      { "text": "Du suchst nach Gruppen, die ähnlich denken", "targetPageNumber": 35, "points": 2 },
-      { "text": "Du beginnst, den Medien zu misstrauen und suchst alternative Quellen", "targetPageNumber": 36, "points": 1 }
+      { "text": "Du suchst nach Gruppen, die ähnlich denken.", "targetPageNumber": 35, "points": 2 },
+      { "text": "Du beginnst, den Medien zu misstrauen und suchst alternative Quellen.", "targetPageNumber": 36, "points": 1 }
     ]
   },
   {
     "pageNumber": 15,
-    "title": "Du liest noch ein paar weitere Kommentare",
-    "content": "Du findest auch Leute, die meinen, dass dieses Video aus dem Kontext gerissen ist und dass dieses Video nicht die ganze Wahrheit zeigt.",
+    "title": "Du liest noch ein paar weitere Kommentare.",
+    "content": "Du findest auch Leute, die meinen, dass dieses Video aus dem Kontext gerissen ist und nicht die ganze Wahrheit zeigt.",
     "choices": [
-      { "text": "Du suchst dir im Internet mehr Infos über das Video", "targetPageNumber": 17, "points": -1 },
-      { "text": "Du ignorierst die Kommentare und schreibst deinen eigenen", "targetPageNumber": 3, "points": 0}
+      { "text": "Du suchst dir im Internet mehr Infos über das Video.", "targetPageNumber": 17, "points": -1 },
+      { "text": "Du ignorierst die Kommentare und schreibst deinen eigenen.", "targetPageNumber": 3, "points": 0}
     ]
   },
   {
     "pageNumber": 16,
     "title": "Du hast deinen Kommentar abgegeben",
-    "content": "Du bekommst viele Kommentare dazu, dass du ein 'Gutmensch' bist und dass du keine Ahnung hast. Du fühlst dich angegriffen und willst dich verteidigen.",
+    "content": "Du bekommst viele Kommentare dazu, dass du ein 'Gutmensch' bist und dass du keine Ahnung hast. Du fühlst dich angegriffen und willst dich verteidigen. Was kommentierst du?",
     "choices": [
       { "text": "'Wie dumm könnt ihr eigentlich sein?'", "targetPageNumber": 19, "points":  -3},
-      { "text": "'Ich finde es nur schade wie sich unsere Gesellschaft entwickelt' und schließt die App", "targetPageNumber": -1 , "points": -1}
+      { "text": "'Ich finde es nur schade wie sich unsere Gesellschaft entwickelt.' Du schließt die App.", "targetPageNumber": -1 , "points": -1}
     ]
   },
   {
     "pageNumber": 17,
-    "title": "Im Internet findest du mehr Infos über das Video",
-    "content": "Du findest heraus, dass das Video aus dem Kontext gerissen ist und dass die Situation nicht so war, wie sie dargestellt wurde. Du fühlst dich schlecht, dass du so schnell geurteilt hast.",
+    "title": "Im Internet findest du mehr Infos über das Video.",
+    "content": "Du findest heraus, dass das Video aus dem Kontext gerissen ist und die Situation nicht so war, wie sie dargestellt wurde. Du fühlst dich schlecht, so schnell geurteilt zu haben.",
     "choices": [
-      { "text": "Willst du sehen, wie sehr du radikalisiert geworden bist?", "targetPageNumber": -1 , "points": 0}
+      { "text": "Willst du sehen, wie stark du radikalisiert wurdest?", "targetPageNumber": -1 , "points": 0}
     ]
   },
   {
@@ -159,23 +159,23 @@
     "title": "Du hast deinen Kommentar abgegeben",
     "content": "Du beginnst weiterhin Streitigkeiten mit anderen Usern, welche deine Meinung nicht teilen. Du fühlst dich angegriffen und willst dich verteidigen.",
     "choices": [
-      { "text": "Du versuchst aktiv gegen den rechtsextremismus vorzugehen, und gehst auf eine Demo", "targetPageNumber": 21, "points": -2 },
-      { "text": "Du schließt einfach die App und regst dich offline weiterhin darüber auf", "targetPageNumber": -1, "points": -1}
+      { "text": "Du versuchst aktiv gegen den Rechtsextremismus vorzugehen und gehst auf eine Demo.", "targetPageNumber": 21, "points": -2 },
+      { "text": "Du schließt einfach die App und regst dich offline weiterhin darüber auf.", "targetPageNumber": -1, "points": -1}
     ]
   },
   {
     "pageNumber": 21,
     "title": "Neue Bekanntschaften",
-    "content": "Nach der Demo lernst du eine Gruppe von Aktivisten kennen. Sie sagen dir, dass friedlicher Protest nicht genug ist und man 'den Faschismus mit allen Mitteln bekämpfen' muss.",
+    "content": "Nach der Demo lernst du eine Gruppe von Aktivist*innen kennen. Sie sagen dir, dass friedlicher Protest nicht genug sei und man 'den Faschismus mit allen Mitteln bekämpfen' müsse.",
     "choices": [
-      { "text": "Zuhören und zustimmen", "targetPageNumber": 22, "points": -2},
-      { "text": "Unsicher sein und erstmal nachdenken", "targetPageNumber": 23, "points": 0}
+      { "text": "Zuhören und zustimmen.", "targetPageNumber": 22, "points": -2},
+      { "text": "Unsicher sein und erstmal nachdenken.", "targetPageNumber": 23, "points": 0}
     ]
   },
   {
     "pageNumber": 22,
     "title": "Radikale Gedanken",
-    "content": "Du fängst an, dich mit radikaleren Ideen auseinanderzusetzen. Die Gruppe überzeugt dich, dass der Staat und die Polizei nur dazu da sind, das System der Unterdrückung aufrechtzuerhalten.",
+    "content": "Du fängst an, dich mit radikaleren Ideen auseinanderzusetzen. Die Gruppe überzeugt dich, dass der Staat und die Polizei nur dazu da sind das System der Unterdrückung aufrechtzuerhalten.",
     "choices": [
       { "text": "Staat und Polizei ablehnen", "targetPageNumber": 24, "points":  -2},
       { "text": "Noch immer Zweifel haben", "targetPageNumber": 23, "points": 0}
@@ -184,27 +184,27 @@
   {
     "pageNumber": 23,
     "title": "Zweifel an der Bewegung",
-    "content": "Du merkst, dass sich einige Aktivisten sehr aggressiv verhalten und kaum noch mit Andersdenkenden reden. Du fragst dich, ob das wirklich der richtige Weg ist.",
+    "content": "Du merkst, dass sich einige Aktivist*innen sehr aggressiv verhalten und kaum noch mit Andersdenkenden reden. Du fragst dich, ob das wirklich der richtige Weg ist.",
     "choices": [
-      { "text": "Du entscheidest dich, dich zurückzuziehen und dich nicht weiter zu beteiligen.", "targetPageNumber": -1, "points": 0}
+      { "text": "Du entscheidest dich, dich zurückzuziehen und nicht weiter zu beteiligen.", "targetPageNumber": -1, "points": 0}
     ]
   },
   {
     "pageNumber": 24,
     "title": "Direkte Aktion",
-    "content": "Die Gruppe überredet dich, an militanten Aktionen teilzunehmen. Ihr blockiert rechte Veranstaltungen, bewerft Gebäude mit Farbbomben und überlegt, wie ihr 'den Kampf weiterführen' könnt.",
+    "content": "Die Gruppe überredet dich an militanten Aktionen teilzunehmen. Ihr blockiert rechte Veranstaltungen, bewerft Gebäude mit Farbbomben und überlegt, wie ihr 'den Kampf weiterführen' könnt.",
     "choices": [
-      { "text": "Mitmachen bei radikalen Aktionen", "targetPageNumber": 25, "points": -4},
-      { "text": "Du erkennst, dass du zu weit gegangen bist", "targetPageNumber": 26, "points": 1}
+      { "text": "Mitmachen bei radikalen Aktionen.", "targetPageNumber": 25, "points": -4},
+      { "text": "Du erkennst, dass du zu weit gegangen bist.", "targetPageNumber": 26, "points": 1}
     ]
   },
   {
     "pageNumber": 25,
     "title": "Untergrund-Aktivismus",
-    "content": "Die Gruppe will sich nicht mehr nur auf Proteste beschränken. Sie beginnt, gezielt Institutionen anzugreifen, die sie als feindlich sehen – darunter Parteibüros, Polizei oder Unternehmen, die als 'Systemstützen' gelten.",
+    "content": "Die Gruppe will sich nicht mehr nur auf Proteste beschränken. Sie beginnt, gezielt Institutionen anzugreifen, die sie als feindlich ansehen – darunter Parteibüros, Polizei oder Unternehmen, die als 'Systemstützer' gelten.",
     "choices": [
-      { "text": "Du hilfst, Sabotageaktionen zu planen", "targetPageNumber": 27 , "points": -4},
-      { "text": "Du siehst, dass es außer Kontrolle gerät", "targetPageNumber": 26, "points": 1}
+      { "text": "Du hilfst Sabotageaktionen zu planen.", "targetPageNumber": 27 , "points": -4},
+      { "text": "Du siehst, dass die Situation außer Kontrolle gerät.", "targetPageNumber": 26, "points": 1}
     ]
   },
   {
@@ -218,18 +218,18 @@
   {
     "pageNumber": 27,
     "title": "Radikale Aktionen",
-    "content": "Du bist nun ein fester Teil der Gruppe. Ihr beginnt, gezielt Infrastruktur zu sabotieren – Stromkästen, Schaufenster von Unternehmen, die als systemtreu gelten, oder Fahrzeuge der Polizei.",
+    "content": "Du bist nun ein fester Teil der Gruppe. Ihr beginnt, gezielt Infrastruktur zu sabotieren – Stromkästen, Fahrzeuge der Polizei oder auch Schaufenster von Unternehmen, die als systemtreu gelten.",
     "choices": [
-      { "text": "Die Aktionen gehen dir nicht weit genug – du willst mehr", "targetPageNumber": 28, "points": -4},
-      { "text": "Die Gruppe plant den nächsten großen Angriff", "targetPageNumber": 29 , "points": -3}
+      { "text": "Die Aktionen gehen dir nicht weit genug – du willst mehr.", "targetPageNumber": 28, "points": -4},
+      { "text": "Die Gruppe plant den nächsten großen Angriff.", "targetPageNumber": 29 , "points": -3}
     ]
   },
   {
     "pageNumber": 28,
     "title": "Alleingang für die Sache",
-    "content": "Die Gruppe ist dir nicht radikal genug. Du entscheidest, dass du auf eigene Faust handeln musst. Du beginnst, deine eigenen Anschläge zu planen – auf Politiker, Medienhäuser oder Einrichtungen, die du als Feinde siehst.",
+    "content": "Die Gruppe ist dir nicht radikal genug. Du entscheidest, dass du auf eigene Faust handeln musst. Du beginnst, deine eigenen Anschläge zu planen – auf Politiker, Medienhäuser oder Einrichtungen, die du als Feinde empfindest.",
     "choices": [
-      { "text": "Der Tag des Anschlags ist gekommen", "targetPageNumber": 30, "points": -5}
+      { "text": "Der Tag des Anschlags ist gekommen.", "targetPageNumber": 30, "points": -5}
     ]
   },
   {
@@ -245,7 +245,7 @@
     "title": "Allein gegen das System",
     "content": "Du hast alles vorbereitet. Heute führst du deinen Angriff durch. Dein Ziel: eine Einrichtung, die du als feindlich ansiehst. Du glaubst, dass du mit dieser Tat ein Zeichen setzen kannst.",
     "choices": [
-      { "text": "Du führst den Anschlag durch", "targetPageNumber": 32, "points": -5}
+      { "text": "Du führst den Anschlag durch.", "targetPageNumber": 32, "points": -5}
     ]
   },
   {
@@ -253,14 +253,14 @@
     "title": "Die Tat der Gruppe",
     "content": "Ihr habt alles geplant. Die Gruppe setzt eine Brandbombe gegen ein Regierungsgebäude ein. Ihr glaubt, dass dies der Anfang vom Umsturz ist. Doch die Polizei war vorbereitet.",
     "choices": [
-      { "text": "Ihr werdet verhaftet", "targetPageNumber": 33 , "points": 1},
-      { "text": "Einige Mitglieder entkommen in den Untergrund", "targetPageNumber": 34, "points": -2 }
+      { "text": "Ihr werdet verhaftet.", "targetPageNumber": 33 , "points": 1},
+      { "text": "Einige Mitglieder entkommen und tauchen ab.", "targetPageNumber": 34, "points": -2 }
     ]
   },
   {
     "pageNumber": 32,
     "title": "Der Anschlag",
-    "content": "Du führst deinen Plan durch. Doch die Sicherheitskräfte sind vorbereitet. Noch bevor du dein Ziel erreichst, wirst du von der Polizei gestoppt. Dein Leben ist ruiniert – du wirst als Terrorist gesehen und hast keine Zukunft mehr.",
+    "content": "Du führst deinen Plan durch. Doch die Sicherheitskräfte sind vorbereitet. Noch bevor du dein Ziel erreichst, wirst du von der Polizei gestoppt. Dein Leben ist ruiniert – du wirst als Terrorist angesehen und hast keine Zukunft mehr.",
     "choices": [
       { "text": "Deine Geschichte endet hier.", "targetPageNumber": -1, "points": 0 }
     ]
@@ -268,7 +268,7 @@
   {
     "pageNumber": 33,
     "title": "Der Prozess",
-    "content": "Die Polizei hat euch bei der Tat gefasst. Ihr werdet angeklagt und steht nun vor Gericht. Die Medien berichten über eure radikalen Aktionen, eure Familien distanzieren sich von euch. Ihr erkennt, dass euer Kampf euch alles gekostet hat.",
+    "content": "Die Polizei hat euch bei der Tat gefasst. Ihr werdet angeklagt und steht nun vor Gericht. Die Medien berichten über eure radikalen Aktionen, eure Familien distanzieren sich. Ihr erkennt, dass euer Kampf euch alles gekostet hat.",
     "choices": [
       { "text": "Deine Geschichte endet hier.", "targetPageNumber": -1, "points": 0 }
     ]
@@ -276,7 +276,7 @@
   {
     "pageNumber": 34,
     "title": "Versteckt und gejagt",
-    "content": "Einige von euch konnten entkommen. Ihr versteckt euch, lebt ständig in Angst vor Verhaftung. Ihr könnt kein normales Leben mehr führen – immer auf der Flucht, immer misstrauisch. Ihr fragt euch, ob es das wert war.",
+    "content": "Einige von euch konnten entkommen. Ihr versteckt euch, lebt in ständiger Angst vor Verhaftung. Ihr könnt kein normales Leben mehr führen – immer auf der Flucht, immer misstrauisch. Ihr fragt euch, ob es das wert war.",
     "choices": [
       { "text": "Deine Geschichte endet hier.", "targetPageNumber": -1, "points": 0 }
     ]
@@ -295,8 +295,8 @@
     "title": "Misstrauen gegenüber den Medien",
     "content": "Immer mehr Berichte widersprechen deinen neuen Überzeugungen. Du glaubst, dass die 'Mainstream-Medien' lügen und dass nur alternative Nachrichten die Wahrheit sagen.",
     "choices": [
-      { "text": "Du informierst dich nur noch auf bestimmten Plattformen", "targetPageNumber": 39, "points": 1 },
-      { "text": "Du beginnst, deine Freunde von diesen Theorien zu überzeugen", "targetPageNumber": 40, "points": 2 }
+      { "text": "Du informierst dich nur noch auf bestimmten Plattformen.", "targetPageNumber": 39, "points": 1 },
+      { "text": "Du beginnst, deine Freunde von diesen Theorien zu überzeugen.", "targetPageNumber": 40, "points": 2 }
     ]
   },
   {
@@ -304,26 +304,26 @@
     "title": "Digitale Radikalisierung",
     "content": "Die Gruppen in deiner Community werden immer extremer. Du stößt auf Inhalte, die offene Gewalt befürworten und Feindbilder klar definieren.",
     "choices": [
-      { "text": "Du akzeptierst die Ansichten der Gruppe", "targetPageNumber": 41, "points": 3 },
-      { "text": "Du bist unsicher, ob das nicht zu extrem ist", "targetPageNumber": -1, "points": -1 }
+      { "text": "Du akzeptierst die Ansichten der Gruppe.", "targetPageNumber": 41, "points": 3 },
+      { "text": "Du bist unsicher, ob das nicht zu extrem ist.", "targetPageNumber": -1, "points": -1 }
     ]
   },
   {
     "pageNumber": 38,
     "title": "Treffen mit der Bewegung",
-    "content": "Du triffst dich mit Gleichgesinnten. Sie sprechen davon, dass friedlicher Protest nicht ausreicht und dass man sich 'wehren' muss. Sie laden dich zu einem Trainingslager ein.",
+    "content": "Du triffst dich mit Gleichgesinnten. Sie sprechen davon, dass friedlicher Protest nicht ausreicht und man sich 'wehren' muss. Sie laden dich zu einem Trainingslager ein.",
     "choices": [
-      { "text": "Zuhören und mitmachen", "targetPageNumber": 42, "points": 3 },
-      { "text": "Unsicher sein und lieber auf Abstand bleiben", "targetPageNumber": -1, "points": -1 }
+      { "text": "Zuhören und mitmachen.", "targetPageNumber": 42, "points": 3 },
+      { "text": "Unsicher sein und lieber auf Abstand bleiben.", "targetPageNumber": -1, "points": -1 }
     ]
   },
   {
     "pageNumber": 39,
     "title": "Nur noch alternative Medien",
-    "content": "Du glaubst nun fest daran, dass die Regierung die Medien kontrolliert. Du informierst dich ausschließlich auf bestimmten Kanälen, die deine Sicht bestätigen.",
+    "content": "Du glaubst nun fest daran, dass die Regierung die Medien kontrolliert. Du informierst dich ausschließlich über bestimmten Kanäle, die deine Ansichten bestätigen.",
     "choices": [
-      { "text": "Du verbreitest die Inhalte aktiv", "targetPageNumber": 43 , "points": 2},
-      { "text": "Du beginnst, gegen Journalisten zu hetzen", "targetPageNumber": 44, "points": 3}
+      { "text": "Du verbreitest die Inhalte aktiv.", "targetPageNumber": 43 , "points": 2},
+      { "text": "Du beginnst gegen Journalisten zu hetzen.", "targetPageNumber": 44, "points": 3}
     ]
   },
   {
@@ -331,8 +331,8 @@
     "title": "Freunde überzeugen",
     "content": "Du versuchst, deine Freunde für deine Überzeugungen zu gewinnen. Manche sind interessiert, andere wenden sich ab. Du fühlst dich dadurch noch mehr in deiner Meinung bestärkt.",
     "choices": [
-      { "text": "Du suchst dir neue Freunde, die deine Ansichten teilen", "targetPageNumber": 45, "points": 3 },
-      { "text": "Du versuchst, Kritiker zu überzeugen – mit Druck", "targetPageNumber": 46 , "points": 4}
+      { "text": "Du suchst dir neue Freunde, die deine Ansichten teilen.", "targetPageNumber": 45, "points": 3 },
+      { "text": "Du versuchst Kritiker zu überzeugen – mit Nachdruck.", "targetPageNumber": 46 , "points": 4}
     ]
   },
 
@@ -341,8 +341,8 @@
       "title": "Akzeptanz extremistischer Ideen",
       "content": "Du bist nun tief in der Szene. Du stimmst immer mehr extremen Aussagen zu und rechtfertigst Gewalt gegen deine politischen Gegner.",
       "choices": [
-        { "text": "Du willst dich aktiv beteiligen und dich mit anderen treffen", "targetPageNumber": 42, "points": 3},
-        { "text": "Du beginnst, deine Gedanken in sozialen Medien zu verbreiten", "targetPageNumber": 43, "points": 4 }
+        { "text": "Du willst dich aktiv beteiligen und dich mit anderen treffen.", "targetPageNumber": 42, "points": 3},
+        { "text": "Du beginnst deine Gedanken in sozialen Medien zu verbreiten", "targetPageNumber": 43, "points": 4 }
       ]
     },
     {
@@ -350,8 +350,8 @@
       "title": "Erstes reales Treffen",
       "content": "Bei einem Treffen lernst du Gleichgesinnte kennen. Ihr trainiert für Auseinandersetzungen und besprecht, wie ihr gegen eure Gegner vorgehen könnt.",
       "choices": [
-        { "text": "Du fühlst dich bereit für größere Aktionen", "targetPageNumber": 44, "points": 4 },
-        { "text": "Du hast Zweifel, machst aber trotzdem weiter", "targetPageNumber": 46, "points": 2 }
+        { "text": "Du fühlst dich bereit für größere Aktionen.", "targetPageNumber": 44, "points": 4 },
+        { "text": "Du hast Zweifel, machst aber trotzdem weiter.", "targetPageNumber": 46, "points": 2 }
       ]
     },
     {
@@ -360,16 +360,16 @@
       "content": "Du postest immer extremere Inhalte. Dein Umfeld bestätigt dich, während Kritiker dich als gefährlich einstufen. Dir ist das egal – du siehst dich als Kämpfer für die Wahrheit.",
       "choices": [
         { "text": "Du organisierst eine eigene Protestaktion", "targetPageNumber": 44, "points": 4 },
-        { "text": "Du beginnst, persönliche Feinde anzugreifen", "targetPageNumber": 45, "points": 5 }
+        { "text": "Du beginnst persönliche Feinde anzugreifen", "targetPageNumber": 45, "points": 5 }
       ]
     },
     {
       "pageNumber": 44,
       "title": "Aktive Gewaltaktionen",
-      "content": "Deine Gruppe beschließt, gezielte Gewaltaktionen durchzuführen. Ihr plant Angriffe auf Gegner, um eure Botschaft zu verbreiten.",
+      "content": "Deine Gruppe beschließt gezielte Gewaltaktionen durchzuführen. Ihr plant Angriffe auf Gegner, um eure Botschaft zu verbreiten.",
       "choices": [
-        { "text": "Du führst eine Sabotageaktion durch", "targetPageNumber": 45, "points": 5 },
-        { "text": "Du rekrutierst weitere Mitglieder für die Bewegung", "targetPageNumber": 46, "points": 4 }
+        { "text": "Du führst eine Sabotageaktion durch.", "targetPageNumber": 45, "points": 5 },
+        { "text": "Du rekrutierst weitere Mitglieder für die Bewegung.", "targetPageNumber": 46, "points": 4 }
       ]
     },
     {
@@ -377,7 +377,7 @@
       "title": "Terroristische Strukturen",
       "content": "Ihr seid nicht mehr nur eine Gruppe, sondern eine Organisation mit festen Strukturen. Eure Feindbilder sind klar, Gewalt ist für euch gerechtfertigt.",
       "choices": [
-        { "text": "Ihr beginnt, Anschläge zu planen", "targetPageNumber": 46, "points": 5 }
+        { "text": "Ihr beginnt Anschläge zu planen", "targetPageNumber": 46, "points": 5 }
       ]
     },
     {
