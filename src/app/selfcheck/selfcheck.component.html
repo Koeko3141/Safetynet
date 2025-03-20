@@ -1,6 +1,6 @@
 <main>
   <div class="container">
-    <h3 class="center-align">Self-Check Quiz</h3>
+    <h3 class="center-align">Selbstcheck</h3>
 
     <div class="row" *ngIf="!showFeedback">
       <div class="col s12">
@@ -19,9 +19,9 @@
           <h4>{{ getTitle() }}</h4>
 
           <div class="card red darken-4 center-align white-text result-box">
-            <p>Der Test war zu </p>
-            <h1 class="result-number">{{ correctPercentage }}</h1>
-            <p>Prozent richtig.</p>
+            <p>Das Risiko einer Radikalisierung liegt bei </p>
+            <h1 class="result-number white-text">{{ correctPercentage }}</h1>
+            <p>Prozent.</p>
           </div>
 
           <p class="result-message">{{ getMessage() }}</p>

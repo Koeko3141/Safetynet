@@ -16,7 +16,7 @@ export class QuestionComponent {
   @Input() question: string = "";
   @Input() answers: { text: string, feedback: string }[] = [];
   @Input() correctAnswer: string = "";
-  @Input() feedback: string = "";;
+  @Input() feedback: string = "";
   @Output() answerSelected = new EventEmitter<string>();
   @Output() nextQuestion = new EventEmitter<void>();
 
