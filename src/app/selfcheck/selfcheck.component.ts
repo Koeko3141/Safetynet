@@ -58,11 +58,11 @@ export class SelfcheckComponent {
 
   getMessage(): string {
     if (this.correctPercentage <= 20) {
-      return "Sie haben keine Gefährdung, radikalisiert zu werden. Bitte bleiben Sie dennoch aufmerksam und informieren Sie sich regelmäßig über aktuelle Entwicklungen.";
+      return "Es besteht keine Gefahr, radikalisiert zu werden. Bitte bleiben Sie dennoch aufmerksam und informieren Sie sich regelmäßig über aktuelle Entwicklungen.";
     }
     if (this.correctPercentage <= 50) {
-      return "Sie haben eine moderate Gefahr, radikalisiert zu werden. Wir empfehlen Ihnen, die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch zu nehmen, um sich besser zu schützen.";
+      return "Es besteht eine moderate Gefahr, radikalisiert zu werden. Wir empfehlen Ihnen, die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch zu nehmen, um sich besser zu schützen.";
     }
-    return "Sie haben eine hohe Gefahr, radikalisiert zu werden. Es ist wichtig, dass Sie sofort die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch nehmen, um sich und andere zu schützen.";
+    return "Es besteht große Gefahr, radikalisiert zu werden. Es ist wichtig, dass Sie sofort die weiteren Hilfsmaßnahmen auf unserer Seite in Anspruch nehmen, um sich und andere zu schützen.";
   }
 }
