@@ -1,17 +1,29 @@
-<div>
-    <ul class="alerts">
-        <li *ngFor="let alert of data">
-            <span>
-                <div>
-                    Name: {{alert.name}}
-                </div>
-                <div>
-                    Description: {{alert.description}}
-                </div>
-                <div>
-                    -------
-                </div>
-            </span>
-        </li>
-    </ul>
-</div>
+<main>
+    <div style="padding-top: 24px;" class="light-container">
+        <div class="container">
+            <h1 class="center-align">Eingegangene Meldungen bei Sicherheitsbehörden</h1>
+
+            <p style="margin-bottom: 0">Das ist ein Prototyp für die Einmeldung von anonymen Meldungen an die Sicherheitsbehörden. Die
+                Meldungen werden anhand der verwendeten Wörter priorisiert.</p>
+            <p style="margin-top: 0;">Aktuell wurden für die Funktion beispielhafte Wörter wie "Bombe" oder "nett" manuell mit
+                Risikogewichtungen festgelegt.</p>
+        </div>
+    </div>
+
+    <div class="dark-container">
+        <div class="container">
+            <div class="card-panel white z-depth-0 custom-box">
+                <ul class="alerts">
+                    <li *ngFor="let alert of data">
+                        <div>
+                            <p style="margin-bottom: 0">Name: {{alert.name}}</p>
+                            <p style="margin: 0">Meldung: {{alert.description}}</p>
+                            <p style="margin-top: 0">Risiko: {{alert.priority * 100}} %</p>
+                            <hr>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>

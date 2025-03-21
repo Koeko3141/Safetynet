@@ -2,13 +2,14 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { alerts } from '../Model/AlertDatabase';
+import { RouterLink } from '@angular/router';
 
 declare var M: any; // Materialize-Framework
 
 @Component({
   selector: 'app-help-site',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, RouterLink],
   templateUrl: './help-site.component.html',
   styleUrl: './help-site.component.css'
 })
